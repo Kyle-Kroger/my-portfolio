@@ -2,7 +2,6 @@ import { css } from "styled-components/macro";
 
 const variables = css`
   :root {
-
     /* Colors */
     --color-primary-100: hsl(226, 47%, 80%);
     --color-primary-200: hsl(225, 40%, 67%);
@@ -14,12 +13,11 @@ const variables = css`
     --color-primary-A700: hsl(233, 33%, 26%);
     --color-primary-800: hsl(227, 49%, 27%);
     --color-primary-A800: hsl(227, 32%, 24%);
-    --color-primary-A800T: hsl(227 32% 24% / 0.90);
+    --color-primary-A800T: hsl(227 32% 24% / 0.9);
     --color-primary-900: hsl(230, 53%, 20%);
     --color-primary-A900: hsl(230, 35%, 19%);
-    --color-primary-A900T: hsl(230 35% 19% / 0.90);
+    --color-primary-A900T: hsl(230 35% 19% / 0.9);
     --color-primary-A1000: hsl(230, 35%, 15%);
-    
 
     --color-secondary-100: hsl(243, 60%, 81%);
     --color-secondary-200: hsl(243, 40%, 69%);
@@ -42,20 +40,18 @@ const variables = css`
     --color-tertiary-700: hsl(199, 46%, 27%);
     --color-tertiary-800: hsl(200, 53%, 20%);
     --color-tertiary-900: hsl(198, 83%, 12%);
-    
 
     --color-grey-100: hsl(240, 0%, 84%);
     --color-grey-300: hsl(240, 5%, 50%);
     --color-grey-500: hsl(240, 8%, 30%);
     --color-grey-700: hsl(240, 10%, 12%);
-    --color-grey-900: hsl(240, 20%, 10%);
+    --color-grey-900: hsl(240, 10%, 8%);
 
     --sidebar-color: var(--color-grey-900);
     --sidebar-text-color: hsl(0, 0%, 84%);
     --side-bar-text-faded: hsl(230, 15%, 52%);
     --main-color: var(--color-primary-A900);
     --button-color: hsl(226, 50%, 69%);
-
 
     /* Font-size */
     --fz-xs: 0.875rem;
@@ -81,45 +77,42 @@ const variables = css`
 
     /* Shadows */
     --shadow-color: 234deg 53% 33%;
-    --shadow-color-dark: 233deg 48% 9%;;
+    --shadow-color-dark: 233deg 48% 9%;
 
-    --shadow-elevation-low:
-    0.5px 0.4px 0.9px hsl(var(--shadow-color) / 0.1),
-    0.9px 0.8px 1.6px -0.4px hsl(var(--shadow-color) / 0.23),
-    1.9px 1.6px 3.4px -0.9px hsl(var(--shadow-color) / 0.35);
-    --shadow-elevation-medium:
-    0.5px 0.4px 0.9px hsl(var(--shadow-color) / 0.11),
-    2.1px 1.8px 3.8px -0.3px hsl(var(--shadow-color) / 0.2),
-    4.4px 3.8px 7.9px -0.6px hsl(var(--shadow-color) / 0.3),
-    9.4px 8.2px 17px -0.9px hsl(var(--shadow-color) / 0.4);
-    --shadow-elevation-high:
-    0.5px 0.4px 0.9px hsl(var(--shadow-color) / 0.1),
-    3.8px 3.4px 7px -0.1px hsl(var(--shadow-color) / 0.15),
-    6.8px 6px 12.4px -0.3px hsl(var(--shadow-color) / 0.19),
-    10.2px 9px 18.6px -0.4px hsl(var(--shadow-color) / 0.24),
-    14.8px 13px 26.9px -0.5px hsl(var(--shadow-color) / 0.28),
-    21.3px 18.6px 38.6px -0.6px hsl(var(--shadow-color) / 0.32),
-    30.4px 26.6px 55.1px -0.8px hsl(var(--shadow-color) / 0.37),
-    42.9px 37.6px 77.9px -0.9px hsl(var(--shadow-color) / 0.41);
+    --shadow-elevation-low: 0.5px 0.4px 0.9px hsl(var(--shadow-color) / 0.1),
+      0.9px 0.8px 1.6px -0.4px hsl(var(--shadow-color) / 0.23),
+      1.9px 1.6px 3.4px -0.9px hsl(var(--shadow-color) / 0.35);
+    --shadow-elevation-medium: 0.5px 0.4px 0.9px hsl(var(--shadow-color) / 0.11),
+      2.1px 1.8px 3.8px -0.3px hsl(var(--shadow-color) / 0.2),
+      4.4px 3.8px 7.9px -0.6px hsl(var(--shadow-color) / 0.3),
+      9.4px 8.2px 17px -0.9px hsl(var(--shadow-color) / 0.4);
+    --shadow-elevation-high: 0.5px 0.4px 0.9px hsl(var(--shadow-color) / 0.1),
+      3.8px 3.4px 7px -0.1px hsl(var(--shadow-color) / 0.15),
+      6.8px 6px 12.4px -0.3px hsl(var(--shadow-color) / 0.19),
+      10.2px 9px 18.6px -0.4px hsl(var(--shadow-color) / 0.24),
+      14.8px 13px 26.9px -0.5px hsl(var(--shadow-color) / 0.28),
+      21.3px 18.6px 38.6px -0.6px hsl(var(--shadow-color) / 0.32),
+      30.4px 26.6px 55.1px -0.8px hsl(var(--shadow-color) / 0.37),
+      42.9px 37.6px 77.9px -0.9px hsl(var(--shadow-color) / 0.41);
 
-    --shadow-elevation-low-dark:
-    0.5px 0.4px 0.9px hsl(var(--shadow-color-dark) / 0.1),
-    0.9px 0.8px 1.6px -0.4px hsl(var(--shadow-color-dark) / 0.23),
-    1.9px 1.6px 3.4px -0.9px hsl(var(--shadow-color-dark) / 0.35);
-    --shadow-elevation-medium-dark:
-    0.5px 0.4px 0.9px hsl(var(--shadow-color-dark) / 0.11),
-    2.1px 1.8px 3.8px -0.3px hsl(var(--shadow-color-dark) / 0.2),
-    4.4px 3.8px 7.9px -0.6px hsl(var(--shadow-color-dark) / 0.3),
-    9.4px 8.2px 17px -0.9px hsl(var(--shadow-color-dark) / 0.4);
-    --shadow-elevation-high-dark:
-    0.5px 0.4px 0.9px hsl(var(--shadow-color-dark) / 0.1),
-    3.8px 3.4px 7px -0.1px hsl(var(--shadow-color-dark) / 0.15),
-    6.8px 6px 12.4px -0.3px hsl(var(--shadow-color-dark) / 0.19),
-    10.2px 9px 18.6px -0.4px hsl(var(--shadow-color-dark) / 0.24),
-    14.8px 13px 26.9px -0.5px hsl(var(--shadow-color-dark) / 0.28),
-    21.3px 18.6px 38.6px -0.6px hsl(var(--shadow-color-dark) / 0.32),
-    30.4px 26.6px 55.1px -0.8px hsl(var(--shadow-color-dark) / 0.37),
-    42.9px 37.6px 77.9px -0.9px hsl(var(--shadow-color-dark) / 0.41);
+    --shadow-elevation-low-dark: 0.5px 0.4px 0.9px
+        hsl(var(--shadow-color-dark) / 0.1),
+      0.9px 0.8px 1.6px -0.4px hsl(var(--shadow-color-dark) / 0.23),
+      1.9px 1.6px 3.4px -0.9px hsl(var(--shadow-color-dark) / 0.35);
+    --shadow-elevation-medium-dark: 0.5px 0.4px 0.9px
+        hsl(var(--shadow-color-dark) / 0.11),
+      2.1px 1.8px 3.8px -0.3px hsl(var(--shadow-color-dark) / 0.2),
+      4.4px 3.8px 7.9px -0.6px hsl(var(--shadow-color-dark) / 0.3),
+      9.4px 8.2px 17px -0.9px hsl(var(--shadow-color-dark) / 0.4);
+    --shadow-elevation-high-dark: 0.5px 0.4px 0.9px
+        hsl(var(--shadow-color-dark) / 0.1),
+      3.8px 3.4px 7px -0.1px hsl(var(--shadow-color-dark) / 0.15),
+      6.8px 6px 12.4px -0.3px hsl(var(--shadow-color-dark) / 0.19),
+      10.2px 9px 18.6px -0.4px hsl(var(--shadow-color-dark) / 0.24),
+      14.8px 13px 26.9px -0.5px hsl(var(--shadow-color-dark) / 0.28),
+      21.3px 18.6px 38.6px -0.6px hsl(var(--shadow-color-dark) / 0.32),
+      30.4px 26.6px 55.1px -0.8px hsl(var(--shadow-color-dark) / 0.37),
+      42.9px 37.6px 77.9px -0.9px hsl(var(--shadow-color-dark) / 0.41);
 
     /* Images */
 
@@ -127,7 +120,6 @@ const variables = css`
     --sidebar-width: 230px;
     --content-max-width: 1400px;
   }
-
 `;
 
 export default variables;

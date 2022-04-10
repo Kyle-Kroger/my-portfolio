@@ -11,7 +11,7 @@ import { Hero } from "./components/banner";
 import { ProjectGrid } from "./components/portfolio";
 import { About } from "./components/about";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Contact, Services } from "./components/contact";
 
 function App() {
@@ -33,10 +33,12 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Sidebar showSidebar={showSidebar}>Hello!</Sidebar>
+      <Sidebar showSidebar={showSidebar} toggleBackground={toggleBackground}>
+        Hello!
+      </Sidebar>
       <PageWrapper>
         <MobileHeader toggleSidebar={toggleSidebar}></MobileHeader>
-        <Hero url={background} onClick={toggleBackground}></Hero>
+        <Hero url={background}></Hero>
         <About></About>
         <ProjectGrid> </ProjectGrid>
         <Services></Services>

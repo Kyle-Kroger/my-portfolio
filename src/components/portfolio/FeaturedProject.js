@@ -37,14 +37,15 @@ const FeaturedProject = (props) => {
 };
 
 const StyledWrapper = styled.section`
-  ${helpers.card}
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  ${helpers.topBottomBorder("4px", "var(--color-secondary-600)")}
+  //${helpers.topBottomBorder("4px", "var(--color-secondary-600)")}
   width: 100%;
   padding: 0;
   background-color: var(--color-primary-A900);
+  border: 6px solid var(--color-primary-A1000);
+  border-radius: var(--radius-subtle);
 
   @media ${QUERIES.tabetAndDown} {
     max-width: 800px;
@@ -61,6 +62,11 @@ const Title = styled.section`
   div {
     ${helpers.flexCenter}
     flex-direction: column;
+    margin-top: 3vw;
+
+    @media ${QUERIES.tabetAndDown} {
+      margin-top: 0;
+    }
   }
 
   h3,
@@ -86,7 +92,12 @@ const PhotoCardWrapper = styled.section`
   flex: 1.2;
   min-width: 40%;
   padding: var(--spacing-lg);
+  padding-left: 0;
   padding-bottom: 0;
+
+  @media ${QUERIES.tabetAndDown} {
+    padding-left: var(--spacing-lg);
+  }
 `;
 
 const DescriptionBox = styled.div`
@@ -99,13 +110,15 @@ const DescriptionBox = styled.div`
   padding: var(--spacing-md);
   color: var(--color-primary-100);
   background-color: var(--color-primary-A800);
-  box-shadow: var(--shadow-elevation-medium-dark);
   font-size: var(--fz-md);
   border-radius: var(--radius-subtle);
 
   @media ${QUERIES.tabetAndDown} {
     width: 90%;
-    min-width: 400px;
+    min-width: 100px;
+    left: 0;
+    right: 0;
+    margin: auto;
   }
 `;
 

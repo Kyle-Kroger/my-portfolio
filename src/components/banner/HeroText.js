@@ -2,10 +2,18 @@ import styled from "styled-components/macro";
 import { animations, helpers } from "../../styles";
 import { StyledButton } from "../ui";
 
+const HEADER_TEXT = [
+  "Hello, I'm Kyle!",
+  "Looking to establish a web presence?",
+  "I would love to help you!",
+  "Shoot me an email for a consultation",
+  "Looking forward to talking with you!",
+];
+
 const HeroText = ({ className, children }) => {
   return (
     <StyledWrapper className={className}>
-      <h1>Hello, I'm Kyle!</h1>
+      <h1>{HEADER_TEXT[0]}</h1>
       <p>
         I’m a software engineer that specializes in building (and occasionally
         designing) fullstack web applications. If your interested in building
@@ -22,7 +30,7 @@ const StyledWrapper = styled.section`
   justify-content: center;
   align-items: center;
   text-align: center;
-  max-width: 900px;
+  max-width: 1100px;
   font-family: "Lora", serif;
   color: white;
   background-color: var(--color-primary-A900T);
@@ -32,9 +40,8 @@ const StyledWrapper = styled.section`
   opacity: 0;
   animation: ${animations.fadeIn} 2s ease-in-out 500ms;
   animation-fill-mode: forwards;
-  h1 {
-    text-transform: capitalize;
-  }
+
+  transition: all 400ms;
 
   p {
     margin: var(--spacing-lg) 0;

@@ -33,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
       2vw + 1rem,
       3rem
     );
-    font-weight: 600;
+    font-weight: 500;
   }
 
   h2 {

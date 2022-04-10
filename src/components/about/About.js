@@ -55,8 +55,10 @@ const Inner = styled.div`
 
 const FlexWrapper = styled.div`
   display: flex;
-  ${helpers.topBottomBorder("4px", "var(--color-secondary-600)")}
-  ${helpers.card}
+  //${helpers.topBottomBorder("6px", "var(--color-primary-A1000)")}
+  //${helpers.card}
+  border: 6px solid var(--color-primary-A1000);
+  border-radius: var(--radius-subtle);
   background-color: var(--color-primary-A900);
 `;
 

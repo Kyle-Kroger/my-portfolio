@@ -45,12 +45,13 @@ const Project = (props) => {
 const StyledWrapper = styled.section`
   position: relative;
   ${helpers.flexCenter}
-  ${helpers.card}
-  ${helpers.topBottomBorder("4px", "var(--color-secondary-600)")}
+  //${helpers.topBottomBorder("4px", "var(--color-secondary-600)")}
   flex-direction: column;
   background-color: var(--color-primary-A900);
   padding: var(--spacing-lg) var(--spacing-sm);
   max-width: 700px;
+  border-radius: var(--radius-subtle);
+  border: 6px solid var(--color-primary-A1000);
 `;
 
 const Title = styled.section`
@@ -86,7 +87,8 @@ const PhotoCardWrapper = styled.section`
 `;
 
 const DescriptionBox = styled.div`
-  ${helpers.flexCenter}
+  display: flex;
+  align-items: center;
   flex-direction: column;
   position: relative;
   width: 100%;
@@ -107,6 +109,8 @@ const DescriptionBox = styled.div`
     width: 90%;
     margin: auto;
     background-color: var(--color-primary-A800T);
+    max-height: 40vw;
+    overflow: auto;
   }
 `;
 
