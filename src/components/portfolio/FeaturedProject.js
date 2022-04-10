@@ -1,4 +1,5 @@
 import styled from "styled-components/macro";
+import { QUERIES } from "../../constants";
 import { helpers } from "../../styles";
 import { StyledButton, StyledPhotoCard } from "../ui";
 
@@ -8,6 +9,7 @@ const FeaturedProject = (props) => {
     <StyledWrapper className={className}>
       <Title>
         <div>
+          <h4>Featured Project</h4>
           <h3>{title}</h3>
           <p>React - Styled Components - HTML - CSS</p>
         </div>
@@ -37,22 +39,27 @@ const FeaturedProject = (props) => {
 const StyledWrapper = styled.section`
   ${helpers.card}
   display: flex;
+  flex-wrap: wrap;
   position: relative;
-  flex-direction: row-reverse;
   ${helpers.topBottomBorder("4px", "var(--color-secondary-600)")}
   width: 100%;
   padding: 0;
   background-color: var(--color-primary-A900);
+
+  @media ${QUERIES.tabetAndDown} {
+    max-width: 800px;
+    flex-direction: column;
+  }
 `;
 
 const Title = styled.section`
   flex: 1;
   padding: var(--spacing-lg);
+  padding-bottom: 0;
+  min-width: 40%;
 
   div {
     ${helpers.flexCenter}
-    height: 50%;
-    gap: var(--spacing-md);
     flex-direction: column;
   }
 
@@ -69,7 +76,6 @@ const Title = styled.section`
   }
 
   p {
-    width: 80%;
     font-family: "Roboto", "sans-serif";
 
     color: var(--color-primary-100);
@@ -78,15 +84,17 @@ const Title = styled.section`
 
 const PhotoCardWrapper = styled.section`
   flex: 1.2;
+  min-width: 40%;
   padding: var(--spacing-lg);
-  padding-bottom: calc(200px - 4vw);
+  padding-bottom: 0;
 `;
 
 const DescriptionBox = styled.div`
-  position: absolute;
-  bottom: var(--spacing-lg);
-  right: var(--spacing-xxl);
-  width: 850px;
+  position: relative;
+  bottom: var(--spacing-xl);
+  left: var(--spacing-xl);
+  min-width: 600px;
+  width: 70%;
 
   padding: var(--spacing-md);
   color: var(--color-primary-100);
@@ -94,10 +102,15 @@ const DescriptionBox = styled.div`
   box-shadow: var(--shadow-elevation-medium-dark);
   font-size: var(--fz-md);
   border-radius: var(--radius-subtle);
+
+  @media ${QUERIES.tabetAndDown} {
+    width: 90%;
+    min-width: 400px;
+  }
 `;
 
 const ButtonWrapper = styled.div`
-  width: 25%;
+  width: 40%;
   margin: auto;
   margin-top: var(--spacing-md);
 `;

@@ -5,8 +5,7 @@ import { StyledButton } from "../ui";
 const HeroText = ({ className, children }) => {
   return (
     <StyledWrapper className={className}>
-      <h1>Hey I'm Kyle!</h1>
-      <h1>Hello and Welcome!</h1>
+      <h1>Hello, I'm Kyle!</h1>
       <p>
         I’m a software engineer that specializes in building (and occasionally
         designing) fullstack web applications. If your interested in building

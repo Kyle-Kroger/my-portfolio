@@ -1,13 +1,14 @@
 import styled from "styled-components/macro";
 import { StyledButton, StyledPhotoCard } from "../ui";
 import { helpers } from "../../styles";
+import { QUERIES } from "../../constants";
 
 const Project = (props) => {
   const { title, imgDes, className } = props;
   return (
     <StyledWrapper className={className}>
       <Title>
-        <h2>{title}</h2>
+        <h3>{title}</h3>
         <ul>
           <li>React</li>
           <li>Styled Components</li>
@@ -42,6 +43,7 @@ const Project = (props) => {
 };
 
 const StyledWrapper = styled.section`
+  position: relative;
   ${helpers.flexCenter}
   ${helpers.card}
   ${helpers.topBottomBorder("4px", "var(--color-secondary-600)")}
@@ -52,12 +54,12 @@ const StyledWrapper = styled.section`
 `;
 
 const Title = styled.section`
-  h2,
+  h3,
   li {
     text-align: center;
   }
 
-  h2 {
+  h3 {
     width: 100%;
     color: white;
     border-bottom: 2px solid var(--color-secondary-400);
@@ -97,6 +99,14 @@ const DescriptionBox = styled.div`
 
   div {
     margin-bottom: var(--spacing-sm);
+  }
+
+  @media ${QUERIES.tabetAndDown} {
+    position: absolute;
+    bottom: var(--spacing-sm);
+    width: 90%;
+    margin: auto;
+    background-color: var(--color-primary-A800T);
   }
 `;
 
