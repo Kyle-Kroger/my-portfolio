@@ -94,7 +94,6 @@ const DescriptionBox = styled.div`
   padding-top: 0;
   color: var(--color-primary-100);
   font-size: var(--fz-md);
-  //background-color: var(--color-primary-A900);
 
   border-radius: var(--radius-subtle);
 

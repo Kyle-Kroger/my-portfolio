@@ -107,7 +107,6 @@ const DescriptionBox = styled.div`
   color: var(--color-primary-100);
   background-color: var(--color-primary-A900);
   font-size: var(--fz-md);
-  //border-radius: var(--radius-subtle);
 `;
 
 export default FeaturedProject;

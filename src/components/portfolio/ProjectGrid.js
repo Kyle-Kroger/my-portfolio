@@ -21,7 +21,6 @@ const ProjectGrid = (props) => {
 
 const GridWrapper = styled.section`
   ${helpers.maxWidthWrapper}
-  //padding: var(--spacing-md);
   margin-bottom: var(--spacing-xl);
   display: grid;
   grid-template-columns: 1fr 1fr;
