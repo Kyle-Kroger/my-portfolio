@@ -15,9 +15,10 @@ const variables = css`
     --color-primary-A800: hsl(227, 32%, 24%);
     --color-primary-A800T: hsl(227 32% 24% / 0.9);
     --color-primary-900: hsl(230, 53%, 20%);
-    --color-primary-A900: hsl(230, 35%, 19%);
-    --color-primary-A900T: hsl(230 35% 19% / 0.9);
+    --color-primary-A900: hsl(230, 35%, 18%);
+    --color-primary-A900T: hsl(230 35% 18% / 0.9);
     --color-primary-A1000: hsl(230, 35%, 15%);
+    --color-primary-A1100: hsl(230, 35%, 12%);
 
     --color-secondary-100: hsl(243, 60%, 81%);
     --color-secondary-200: hsl(243, 40%, 69%);
@@ -42,6 +43,7 @@ const variables = css`
     --color-tertiary-900: hsl(198, 83%, 12%);
 
     --color-grey-100: hsl(240, 0%, 84%);
+    --color-grey-200: hsl(240, 3%, 77%);
     --color-grey-300: hsl(240, 5%, 50%);
     --color-grey-500: hsl(240, 8%, 30%);
     --color-grey-700: hsl(240, 10%, 12%);

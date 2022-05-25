@@ -21,8 +21,8 @@ const StyledWrapper = styled.div`
 const Divider = styled.div`
   width: 32%;
   min-width: 250px;
-  height: 4px;
-  background-color: var(--color-primary-300);
+  height: 2px;
+  background-color: var(--color-primary-200);
   margin-top: 4px;
   margin-bottom: var(--spacing-xl);
 `;

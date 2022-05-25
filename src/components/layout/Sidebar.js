@@ -35,6 +35,7 @@ const Sidebar = (props) => {
     <SidebarWrapper showSidebar={props.showSidebar}>
       <ProfileImgWrapper>
         <img src="/img/profile.png" alt="profile-img" />
+        <div />
       </ProfileImgWrapper>
       <StyledNav>
         <ul>
@@ -99,19 +100,25 @@ const SidebarWrapper = styled.div`
 
 const ProfileImgWrapper = styled.figure`
   position: relative;
-  width: 95%;
-  padding: var(--spacing-md);
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  padding-bottom: 0;
 
   img {
     box-shadow: var(--shadow-elevation-medium-dark);
-    border-radius: 40%;
-    border: 4px solid var(--color-primary-100);
+    border-radius: 30%;
+  }
+
+  div {
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-primary-100);
+    margin-top: var(--spacing-md);
   }
 `;
 
 const StyledNav = styled.nav`
   width: 100%;
-  padding-top: 8px;
 
   a {
     display: block;

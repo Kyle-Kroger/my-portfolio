@@ -8,7 +8,7 @@ import Project from "./Project";
 
 const ProjectGrid = (props) => {
   return (
-    <StyledSection color="var(--color-grey-700)">
+    <StyledSection color="var(--color-primary-A1100)">
       <StyledSectionHeading text={"Portfolio"} />
       <GridWrapper>
         <StyledFeaturedProject title="Spotify Playlist Manager"></StyledFeaturedProject>
@@ -25,8 +25,8 @@ const GridWrapper = styled.section`
   margin-bottom: var(--spacing-xl);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-md);
-  background-color: transparent;
+  gap: 16px;
+  background-color: var(--color-primary-A1100);
   justify-items: center;
 
   @media ${QUERIES.tabetAndDown} {

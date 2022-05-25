@@ -28,9 +28,9 @@ const FeaturedProject = (props) => {
           voluptatibus, dignissimos possimus vero, molestias quos sed a earum
           in! Laborum, facere.
         </p>
-        <ButtonWrapper>
-          <StyledButton href="#v">Learn More</StyledButton>
-        </ButtonWrapper>
+        <StyledButton href="#v" width="30%">
+          Learn More
+        </StyledButton>
       </DescriptionBox>
     </StyledWrapper>
   );
@@ -40,12 +40,9 @@ const StyledWrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  //${helpers.topBottomBorder("4px", "var(--color-secondary-600)")}
   width: 100%;
   padding: 0;
-  background-color: var(--color-primary-A900);
-  border: 6px solid var(--color-primary-A1000);
-  border-radius: var(--radius-subtle);
+  background-color: var(--color-primary-A1000);
 
   @media ${QUERIES.tabetAndDown} {
     max-width: 800px;
@@ -77,14 +74,14 @@ const Title = styled.section`
 
   h3 {
     width: 100%;
-    color: white;
-    border-bottom: 2px solid var(--color-secondary-400);
+    color: var(--color-primary-100);
+    border-bottom: 4px solid var(--color-primary-A900);
   }
 
   p {
     font-family: "Roboto", "sans-serif";
 
-    color: var(--color-primary-100);
+    color: var(--color-primary-300);
   }
 `;
 
@@ -101,31 +98,16 @@ const PhotoCardWrapper = styled.section`
 `;
 
 const DescriptionBox = styled.div`
-  position: relative;
-  bottom: var(--spacing-xl);
-  left: var(--spacing-xl);
-  min-width: 600px;
-  width: 70%;
-
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: var(--spacing-md);
   padding: var(--spacing-md);
   color: var(--color-primary-100);
-  background-color: var(--color-primary-A800);
+  background-color: var(--color-primary-A900);
   font-size: var(--fz-md);
-  border-radius: var(--radius-subtle);
-
-  @media ${QUERIES.tabetAndDown} {
-    width: 90%;
-    min-width: 100px;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
-`;
-
-const ButtonWrapper = styled.div`
-  width: 40%;
-  margin: auto;
-  margin-top: var(--spacing-md);
+  //border-radius: var(--radius-subtle);
 `;
 
 export default FeaturedProject;

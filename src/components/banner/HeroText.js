@@ -36,7 +36,6 @@ const StyledWrapper = styled.section`
   background-color: var(--color-primary-A900T);
   padding: 64px;
   border-radius: var(--radius-subtle);
-  ${helpers.topBottomBorder("4px", "var(--color-secondary-600)")}
   opacity: 0;
   animation: ${animations.fadeIn} 2s ease-in-out 500ms;
   animation-fill-mode: forwards;

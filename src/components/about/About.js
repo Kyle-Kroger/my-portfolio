@@ -6,7 +6,7 @@ import StyledSectionHeading from "../ui/StyledSectionHeading";
 
 const About = (props) => {
   return (
-    <StyledSection color="var(--color-grey-700)">
+    <StyledSection color="var(--color-primary-A1100)">
       <Inner>
         <StyledSectionHeading text={"About Me"} />
         <FlexWrapper>
@@ -57,9 +57,9 @@ const FlexWrapper = styled.div`
   display: flex;
   //${helpers.topBottomBorder("6px", "var(--color-primary-A1000)")}
   //${helpers.card}
-  border: 6px solid var(--color-primary-A1000);
+
   border-radius: var(--radius-subtle);
-  background-color: var(--color-primary-A900);
+  background-color: var(--color-primary-A1000);
 `;
 
 const StyledSectionWrapper = styled.section`
@@ -68,7 +68,7 @@ const StyledSectionWrapper = styled.section`
 
   p {
     font-size: var(--fz-lg);
-    color: var(--color-primary-100);
+    color: var(--color-grey-200);
     padding: var(--spacing-md) 0;
   }
 `;
