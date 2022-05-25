@@ -5,10 +5,10 @@ import HeroImage from "./HeroImage";
 import HeroText from "./HeroText";
 
 const Hero = (props) => {
-  const { url, height, onClick } = props;
+  const { url, height } = props;
   return (
     <Wrapper>
-      <StyledHeroImage url={url} height={height} onClick={onClick} />
+      <StyledHeroImage url={url} height={height} />
       <TextWrapper>
         <HeroText></HeroText>
       </TextWrapper>

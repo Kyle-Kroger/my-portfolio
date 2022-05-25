@@ -45,12 +45,11 @@ const Project = (props) => {
 const StyledWrapper = styled.section`
   position: relative;
   ${helpers.flexCenter}
-  ${helpers.card}
-  ${helpers.topBottomBorder("4px", "var(--color-secondary-600)")}
   flex-direction: column;
-  background-color: var(--color-primary-A900);
   padding: var(--spacing-lg) var(--spacing-sm);
   max-width: 700px;
+  border-radius: var(--radius-subtle);
+  background-color: var(--color-primary-A1000);
 `;
 
 const Title = styled.section`
@@ -61,8 +60,8 @@ const Title = styled.section`
 
   h3 {
     width: 100%;
-    color: white;
-    border-bottom: 2px solid var(--color-secondary-400);
+    color: var(--color-primary-100);
+    border-bottom: 4px solid var(--color-primary-A900);
     padding-bottom: var(--spacing-sm);
   }
 
@@ -75,7 +74,7 @@ const Title = styled.section`
 
   li {
     font-family: "Roboto", "sans-serif";
-    color: var(--color-primary-100);
+    color: var(--color-primary-300);
     margin-bottom: var(--spacing-xs);
   }
 `;
@@ -86,27 +85,21 @@ const PhotoCardWrapper = styled.section`
 `;
 
 const DescriptionBox = styled.div`
-  ${helpers.flexCenter}
+  display: flex;
+  align-items: center;
   flex-direction: column;
   position: relative;
   width: 100%;
   padding: var(--spacing-md);
+  padding-top: 0;
   color: var(--color-primary-100);
   font-size: var(--fz-md);
-  background-color: var(--color-primary-A800);
+  //background-color: var(--color-primary-A900);
 
   border-radius: var(--radius-subtle);
 
   div {
     margin-bottom: var(--spacing-sm);
-  }
-
-  @media ${QUERIES.tabetAndDown} {
-    position: absolute;
-    bottom: var(--spacing-sm);
-    width: 90%;
-    margin: auto;
-    background-color: var(--color-primary-A800T);
   }
 `;
 

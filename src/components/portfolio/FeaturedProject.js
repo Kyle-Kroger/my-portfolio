@@ -28,23 +28,21 @@ const FeaturedProject = (props) => {
           voluptatibus, dignissimos possimus vero, molestias quos sed a earum
           in! Laborum, facere.
         </p>
-        <ButtonWrapper>
-          <StyledButton href="#v">Learn More</StyledButton>
-        </ButtonWrapper>
+        <StyledButton href="#v" width="30%">
+          Learn More
+        </StyledButton>
       </DescriptionBox>
     </StyledWrapper>
   );
 };
 
 const StyledWrapper = styled.section`
-  ${helpers.card}
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  ${helpers.topBottomBorder("4px", "var(--color-secondary-600)")}
   width: 100%;
   padding: 0;
-  background-color: var(--color-primary-A900);
+  background-color: var(--color-primary-A1000);
 
   @media ${QUERIES.tabetAndDown} {
     max-width: 800px;
@@ -61,6 +59,11 @@ const Title = styled.section`
   div {
     ${helpers.flexCenter}
     flex-direction: column;
+    margin-top: 3vw;
+
+    @media ${QUERIES.tabetAndDown} {
+      margin-top: 0;
+    }
   }
 
   h3,
@@ -71,14 +74,14 @@ const Title = styled.section`
 
   h3 {
     width: 100%;
-    color: white;
-    border-bottom: 2px solid var(--color-secondary-400);
+    color: var(--color-primary-100);
+    border-bottom: 4px solid var(--color-primary-A900);
   }
 
   p {
     font-family: "Roboto", "sans-serif";
 
-    color: var(--color-primary-100);
+    color: var(--color-primary-300);
   }
 `;
 
@@ -86,33 +89,25 @@ const PhotoCardWrapper = styled.section`
   flex: 1.2;
   min-width: 40%;
   padding: var(--spacing-lg);
+  padding-left: 0;
   padding-bottom: 0;
-`;
-
-const DescriptionBox = styled.div`
-  position: relative;
-  bottom: var(--spacing-xl);
-  left: var(--spacing-xl);
-  min-width: 600px;
-  width: 70%;
-
-  padding: var(--spacing-md);
-  color: var(--color-primary-100);
-  background-color: var(--color-primary-A800);
-  box-shadow: var(--shadow-elevation-medium-dark);
-  font-size: var(--fz-md);
-  border-radius: var(--radius-subtle);
 
   @media ${QUERIES.tabetAndDown} {
-    width: 90%;
-    min-width: 400px;
+    padding-left: var(--spacing-lg);
   }
 `;
 
-const ButtonWrapper = styled.div`
-  width: 40%;
-  margin: auto;
+const DescriptionBox = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   margin-top: var(--spacing-md);
+  padding: var(--spacing-md);
+  color: var(--color-primary-100);
+  background-color: var(--color-primary-A900);
+  font-size: var(--fz-md);
+  //border-radius: var(--radius-subtle);
 `;
 
 export default FeaturedProject;

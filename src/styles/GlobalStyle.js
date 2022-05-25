@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
       box-sizing: border-box;
     }
   }
-
+  
   body {
     font-family: 'Roboto', 'sans-serif';
     line-height: 1.4;
@@ -33,7 +33,7 @@ const GlobalStyle = createGlobalStyle`
       2vw + 1rem,
       3rem
     );
-    font-weight: 600;
+    font-weight: 500;
   }
 
   h2 {

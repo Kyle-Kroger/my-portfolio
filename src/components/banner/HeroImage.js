@@ -1,28 +1,26 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { css } from "styled-components";
 import { keyframes } from "styled-components";
 import styled from "styled-components/macro";
 import { useFirstRender } from "../../Hooks";
 
 const HeroImage = (props) => {
-  const { children, url, height, onClick, className } = props;
+  const { children, url, height, className } = props;
   const [newUrl, setNewUrl] = useState(url);
   const [animated, setAnimated] = useState(false);
   const firstRender = useFirstRender();
 
-  let timeoutId = useRef();
-
   useEffect(() => {
-    clearTimeout(timeoutId.current);
-
+    let timeout;
     if (!firstRender) {
       setAnimated(true);
+      timeout = setTimeout(() => {
+        setNewUrl(url);
+        setAnimated(false);
+      }, 2000);
     }
 
-    timeoutId.current = setTimeout(() => {
-      setNewUrl(url);
-      setAnimated(false);
-    }, 2000);
+    return () => clearTimeout(timeout);
   }, [url, firstRender]);
 
   return (
@@ -32,7 +30,6 @@ const HeroImage = (props) => {
       newUrl={newUrl}
       height={height}
       animated={animated}
-      onClick={onClick}
     >
       {children}
     </HeroImgBackground>
@@ -57,6 +54,7 @@ const HeroImgBackground = styled.div`
   ${(p) =>
     p.animated &&
     css`
+      pointer-events: none;
       animation: ${changeBg(p.url, p.newUrl)} 2s ease-in-out 200ms;
     `}
 `;

@@ -9,7 +9,7 @@ const StyledButton = styled.a`
   letter-spacing: 1px;
   font-weight: bold;
   border-radius: var(--radius-small);
-  border: 3px solid var(--color-secondary-600);
+  border: 4px solid var(--color-secondary-500);
   padding: var(--spacing-sm);
   width: ${(p) => (p.width ? p.width : "100%")};
 `;

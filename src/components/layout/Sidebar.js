@@ -6,16 +6,36 @@ import {
   faUser,
   faImagePortrait,
   faMoon,
+  faSun,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { NavFooter } from ".";
 import { QUERIES } from "../../constants";
+import { useEffect, useState } from "react";
 
 const Sidebar = (props) => {
+  const { toggleBackground } = props;
+  const [themeIcon, setThemeIcon] = useState(faMoon);
+  const [disabled, setDisabled] = useState(false);
+
+  useEffect(() => {
+    setDisabled(true);
+    const timer = setTimeout(() => {
+      setDisabled(false);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, [themeIcon]);
+
+  const changeTheme = () => {
+    toggleBackground();
+    setThemeIcon((prevIcon) => (prevIcon === faMoon ? faSun : faMoon));
+  };
+
   return (
     <SidebarWrapper showSidebar={props.showSidebar}>
       <ProfileImgWrapper>
         <img src="/img/profile.png" alt="profile-img" />
+        <div />
       </ProfileImgWrapper>
       <StyledNav>
         <ul>
@@ -45,8 +65,8 @@ const Sidebar = (props) => {
           </a>
         </ul>
       </StyledNav>
-      <ThemeButton>
-        <ThemeIcon icon={faMoon}></ThemeIcon>
+      <ThemeButton onClick={changeTheme} disabled={disabled} icon={themeIcon}>
+        <ThemeIcon icon={themeIcon}></ThemeIcon>
       </ThemeButton>
       <NavFooterWrapper>
         <NavFooter></NavFooter>
@@ -80,18 +100,25 @@ const SidebarWrapper = styled.div`
 
 const ProfileImgWrapper = styled.figure`
   position: relative;
-  width: 95%;
-  padding: var(--spacing-md);
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  padding-bottom: 0;
 
   img {
     box-shadow: var(--shadow-elevation-medium-dark);
-    border-radius: 35%;
+    border-radius: 30%;
+  }
+
+  div {
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-primary-100);
+    margin-top: var(--spacing-md);
   }
 `;
 
 const StyledNav = styled.nav`
   width: 100%;
-  padding-top: 8px;
 
   a {
     display: block;
@@ -102,11 +129,9 @@ const StyledNav = styled.nav`
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-top: 1px solid var(--color-primary-400);
   }
 
   ul li {
-    border-bottom: 1px solid var(--color-primary-400);
     width: 100%;
     padding-top: 16px;
     padding-bottom: 16px;
@@ -116,7 +141,7 @@ const StyledNav = styled.nav`
   }
 
   ul li:hover {
-    background-color: var(--color-secondary-600);
+    background-color: var(--color-primary-700);
     color: white;
   }
 `;
@@ -127,7 +152,11 @@ const StyledIcon = styled(FontAwesomeIcon)`
 
 const ThemeIcon = styled(FontAwesomeIcon)`
   font-size: 26px;
-  transform: translate(2px, 2px);
+  //moving one whole pixel
+  transform: ${(p) =>
+    p.icon === faMoon ? "translate(2px, 2px)" : "translate(0px, 2px)"};
+  border-radius: 40%;
+  //transform: translate(2px, 2px);
   transition: color 200ms ease-out;
 `;
 
@@ -136,15 +165,17 @@ const ThemeButton = styled.a`
   bottom: 80px;
   margin-top: var(--spacing-lg);
   padding: var(--spacing-sm);
-  background-color: var(--color-primary-700);
+  background-color: ${(p) =>
+    p.icon === faMoon ? "var(--color-primary-700)" : "#b16f05"};
   border-radius: 40%;
-
-  transition: background-color 200ms ease-out;
-
+  transition: background-color 600ms ease-out;
   cursor: pointer;
+
+  pointer-events: ${(p) => (p.disabled ? "none" : "auto")};
 
   &:hover {
     background-color: var(--color-primary-500);
+    transition: background-color 200ms ease-out;
   }
 
   &:hover ${ThemeIcon} {
