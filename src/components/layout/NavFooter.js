@@ -1,17 +1,23 @@
 import styled from "styled-components/macro";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faTwitter, faGit, faLinkedin} from "@fortawesome/free-brands-svg-icons";
+import {
+  faTwitter,
+  faGit,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const NavFooter = (props) => {
-  return ( <Wrapper>
-    <StyledIcon icon={faTwitter}/>
-    <StyledIcon icon={faGit}/>
-    <StyledIcon icon={faLinkedin}/>
-    <StyledIcon icon={faEnvelope}/>
-  </Wrapper> );
-}
+  return (
+    <Wrapper>
+      <StyledIcon icon={faTwitter} />
+      <StyledIcon icon={faGit} />
+      <StyledIcon icon={faLinkedin} />
+      <StyledIcon icon={faEnvelope} />
+    </Wrapper>
+  );
+};
 
 const Wrapper = styled.div`
   display: flex;
@@ -26,11 +32,12 @@ const Wrapper = styled.div`
 `;
 
 const StyledIcon = styled(FontAwesomeIcon)`
-  transition: color 150ms ease-in;
+  transition: color 150ms ease-in, transform 150ms ease-in;
 
   &:hover {
     color: white;
+    transform: scale(1.2);
   }
 `;
- 
+
 export default NavFooter;

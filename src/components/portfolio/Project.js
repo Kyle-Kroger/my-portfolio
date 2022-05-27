@@ -9,7 +9,7 @@ const Project = (props) => {
     <StyledWrapper className={className} featured={featured}>
       <Title featured={featured}>
         <div>
-          {featured && <h4>Featured Project</h4>}
+          {featured && <h4>-- Featured Project --</h4>}
           <h3>{title}</h3>
           <ul>
             <li>React</li>
@@ -37,7 +37,7 @@ const Project = (props) => {
             earum in! Laborum, facere.
           </p>
         </div>
-        <StyledButton href="#v" width="40%">
+        <StyledButton href="#v" width="250px">
           Learn More
         </StyledButton>
       </DescriptionBox>
@@ -70,6 +70,7 @@ const StyledWrapper = styled.section`
 
 const Title = styled.section`
   padding: var(--spacing-md);
+  padding-bottom: 0;
 
   ${(p) =>
     p.featured &&
@@ -98,9 +99,13 @@ const Title = styled.section`
 
   h3 {
     width: 100%;
-    color: var(--color-primary-100);
+    color: white;
     border-bottom: 4px solid var(--color-primary-A900);
     padding-bottom: var(--spacing-sm);
+  }
+
+  h4 {
+    color: var(--color-secondary-100);
   }
 
   ul {
@@ -146,7 +151,6 @@ const DescriptionBox = styled.div`
   margin-top: var(--spacing-md);
   color: var(--color-grey-100);
   font-size: var(--fz-md);
-  border-radius: var(--radius-subtle);
   background-color: var(--color-primary-A900);
 
   p {

@@ -83,7 +83,7 @@ const SidebarWrapper = styled.div`
 
   font-size: var(--fz-lg);
   background-color: var(--sidebar-color);
-  color: var(--color-primary-100);
+  color: var(--color-grey-100);
 
   position: fixed;
   left: 0;
