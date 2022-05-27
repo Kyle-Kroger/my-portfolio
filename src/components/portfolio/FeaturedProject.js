@@ -11,7 +11,14 @@ const FeaturedProject = (props) => {
         <div>
           <h4>Featured Project</h4>
           <h3>{title}</h3>
-          <p>React - Styled Components - HTML - CSS</p>
+          <ul>
+            <li>React</li>
+            <li>Styled Components</li>
+            <li>HTML</li>
+            <li>React</li>
+            <li>Styled Components</li>
+            <li>HTML</li>
+          </ul>
         </div>
       </Title>
       <PhotoCardWrapper>
@@ -67,21 +74,30 @@ const Title = styled.section`
   }
 
   h3,
-  p {
+  h4,
+  li {
     text-align: center;
-    padding: var(--spacing-md);
+    //padding: var(--spacing-md);
   }
 
   h3 {
     width: 100%;
     color: var(--color-primary-100);
     border-bottom: 4px solid var(--color-primary-A900);
+    padding-bottom: var(--spacing-sm);
   }
 
-  p {
-    font-family: "Roboto", "sans-serif";
+  ul {
+    ${helpers.flexCenter};
+    flex-wrap: wrap;
+    column-gap: var(--spacing-xl);
+    margin-top: var(--spacing-sm);
+  }
 
+  li {
+    font-family: "Roboto", "sans-serif";
     color: var(--color-primary-300);
+    margin-bottom: var(--spacing-xs);
   }
 `;
 
@@ -98,10 +114,10 @@ const PhotoCardWrapper = styled.section`
 `;
 
 const DescriptionBox = styled.div`
-  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 100%;
   margin-top: var(--spacing-md);
   padding: var(--spacing-md);
   color: var(--color-primary-100);

@@ -3,7 +3,6 @@ import { QUERIES } from "../../constants";
 import { helpers } from "../../styles";
 import { StyledSection, StyledSectionHeading } from "../ui";
 
-import FeaturedProject from "./FeaturedProject";
 import Project from "./Project";
 
 const ProjectGrid = (props) => {
@@ -11,7 +10,11 @@ const ProjectGrid = (props) => {
     <StyledSection color="var(--color-primary-A1100)">
       <StyledSectionHeading text={"Portfolio"} />
       <GridWrapper>
-        <StyledFeaturedProject title="Spotify Playlist Manager"></StyledFeaturedProject>
+        <StyledProject
+          title="Spotify Playlist Manager"
+          featured
+          className="featured"
+        ></StyledProject>
         <StyledProject title="Project 1"></StyledProject>
         <StyledProject title="Project 2"></StyledProject>
       </GridWrapper>
@@ -33,15 +36,12 @@ const GridWrapper = styled.section`
   }
 `;
 
-const StyledFeaturedProject = styled(FeaturedProject)`
-  grid-column: 1/-1;
-
-  @media ${QUERIES.laptopAndDown} {
-  }
-`;
-
 const StyledProject = styled(Project)`
   @media ${QUERIES.tabetAndDown} {
+    grid-column: 1/-1;
+  }
+
+  &.featured {
     grid-column: 1/-1;
   }
 `;

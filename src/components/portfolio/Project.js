@@ -1,27 +1,30 @@
-import styled from "styled-components/macro";
+import styled, { css } from "styled-components/macro";
 import { StyledButton, StyledPhotoCard } from "../ui";
 import { helpers } from "../../styles";
 import { QUERIES } from "../../constants";
 
 const Project = (props) => {
-  const { title, imgDes, className } = props;
+  const { title, imgDes, className, featured } = props;
   return (
-    <StyledWrapper className={className}>
-      <Title>
-        <h3>{title}</h3>
-        <ul>
-          <li>React</li>
-          <li>Styled Components</li>
-          <li>HTML</li>
-          <li>React</li>
-          <li>Styled Components</li>
-          <li>HTML</li>
-        </ul>
+    <StyledWrapper className={className} featured={featured}>
+      <Title featured={featured}>
+        <div>
+          {featured && <h4>Featured Project</h4>}
+          <h3>{title}</h3>
+          <ul>
+            <li>React</li>
+            <li>Styled Components</li>
+            <li>HTML</li>
+            <li>React</li>
+            <li>Styled Components</li>
+            <li>HTML</li>
+          </ul>
+        </div>
       </Title>
-      <PhotoCardWrapper>
+      <PhotoCardWrapper featured={featured}>
         <StyledPhotoCard>
           <a href="#v">
-            <img src="http://placekitten.com/800/350" alt={imgDes} />
+            <img src="http://placekitten.com/800/450" alt={imgDes} />
           </a>
         </StyledPhotoCard>
       </PhotoCardWrapper>
@@ -43,18 +46,52 @@ const Project = (props) => {
 };
 
 const StyledWrapper = styled.section`
-  position: relative;
-  ${helpers.flexCenter}
+  display: flex;
   flex-direction: column;
-  padding: var(--spacing-lg) var(--spacing-sm);
-  max-width: 700px;
+  //padding: var(--spacing-lg) var(--spacing-sm);
+  padding-bottom: 0;
   border-radius: var(--radius-subtle);
   background-color: var(--color-primary-A1000);
-  //test ssh
+
+  ${(p) =>
+    p.featured &&
+    css`
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 0;
+      width: 100%;
+    `}
+
+  @media ${QUERIES.tabetAndDown} {
+    max-width: 850px;
+    flex-direction: column;
+  }
 `;
 
 const Title = styled.section`
+  padding: var(--spacing-md);
+
+  ${(p) =>
+    p.featured &&
+    css`
+      flex: 1;
+      padding: var(--spacing-lg);
+      padding-bottom: 0;
+      min-width: 40%;
+
+      div {
+        ${helpers.flexCenter}
+        flex-direction: column;
+        margin-top: 3vw;
+
+        @media ${QUERIES.tabetAndDown} {
+          margin-top: 0;
+        }
+      }
+    `}
+
   h3,
+  h4,
   li {
     text-align: center;
   }
@@ -75,31 +112,45 @@ const Title = styled.section`
 
   li {
     font-family: "Roboto", "sans-serif";
-    color: var(--color-primary-300);
+    color: var(--color-grey-200);
     margin-bottom: var(--spacing-xs);
   }
 `;
 
 const PhotoCardWrapper = styled.section`
-  padding: var(--spacing-xs);
-  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-md);
+
+  ${(p) =>
+    p.featured &&
+    css`
+      flex: 1.2;
+      min-width: 40%;
+      padding: var(--spacing-lg);
+      padding-left: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+
+      @media ${QUERIES.tabetAndDown} {
+        padding-left: var(--spacing-lg);
+      }
+    `}
 `;
 
 const DescriptionBox = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  position: relative;
   width: 100%;
   padding: var(--spacing-md);
   padding-top: 0;
-  color: var(--color-primary-100);
+  margin-top: var(--spacing-md);
+  color: var(--color-grey-100);
   font-size: var(--fz-md);
-
   border-radius: var(--radius-subtle);
+  background-color: var(--color-primary-A900);
 
-  div {
-    margin-bottom: var(--spacing-sm);
+  p {
+    padding: var(--spacing-md) 0;
   }
 `;
 
