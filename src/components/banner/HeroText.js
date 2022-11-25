@@ -15,11 +15,11 @@ const HeroText = ({ className, children }) => {
     <StyledWrapper className={className}>
       <h1>{HEADER_TEXT[0]}</h1>
       <p>
-        I’m a software engineer that specializes in building (and occasionally
-        designing) fullstack web applications. If your interested in building
+        I’m a software engineer that specializes in building and occasionally
+        designing fullstack web applications. If you're interested in building
         something together click the button to learn more!
       </p>
-      <StyledButton width={"200px"}>Learn More</StyledButton>
+      <StyledButton width={"200px"}>Let's Connect!</StyledButton>
     </StyledWrapper>
   );
 };
@@ -45,7 +45,7 @@ const StyledWrapper = styled.section`
   p {
     margin: var(--spacing-lg) 0;
     font-size: var(--fz-lg);
-    color: var(--color-primary-100);
+    color: var(--color-grey-100);
   }
 `;
 
