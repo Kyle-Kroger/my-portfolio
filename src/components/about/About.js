@@ -8,7 +8,6 @@ const About = (props) => {
   return (
     <StyledSection color="var(--color-primary-A1100)">
       <Inner>
-        <StyledSectionHeading text={"About Me"} />
         <FlexWrapper>
           <StyledSectionWrapper>
             <h3>Hi! I'm Kyle!</h3>

@@ -119,7 +119,7 @@ const variables = css`
     /* Images */
 
     /* Sizing */
-    --sidebar-width: 230px;
+    --sidebar-width: 220px;
     --content-max-width: 1400px;
   }
 `;
