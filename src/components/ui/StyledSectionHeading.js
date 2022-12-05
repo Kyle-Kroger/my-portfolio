@@ -19,10 +19,10 @@ const StyledWrapper = styled.div`
 `;
 
 const Divider = styled.div`
-  width: 32%;
+  width: 24%;
   min-width: 250px;
   height: 2px;
-  background-color: var(--color-primary-200);
+  background-color: var(--color-primary-500);
   margin-top: 4px;
   margin-bottom: var(--spacing-xl);
 `;

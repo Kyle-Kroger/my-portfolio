@@ -9,7 +9,6 @@ const variables = css`
     --color-primary-400: hsl(225, 32%, 46%);
     --color-primary-500: hsl(226, 41%, 37%);
     --color-primary-600: hsl(226, 43%, 34%);
-    --color-primary-700: hsl(227, 46%, 31%);
     --color-primary-A700: hsl(233, 33%, 26%);
     --color-primary-800: hsl(227, 49%, 27%);
     --color-primary-A800: hsl(227, 32%, 24%);
@@ -19,6 +18,14 @@ const variables = css`
     --color-primary-A900T: hsl(230 35% 18% / 0.9);
     --color-primary-A1000: hsl(230, 35%, 15%);
     --color-primary-A1100: hsl(230, 35%, 12%);
+
+    --color-primary-300: hsl(230, 39%, 37%);
+    --color-primary-500: hsl(230, 39%, 29%);
+    --color-primary-600: hsl(235, 43%, 22%);
+    --color-primary-700: hsl(234, 48%, 17%);
+    --color-primary-700T: hsl(234 48% 17% / 0.9);
+    --color-primary-900: hsl(230, 57%, 12%);
+    --color-primary-900T: hsl(230 57% 12% / 0.9);
 
     --color-secondary-100: hsl(243, 60%, 81%);
     --color-secondary-200: hsl(243, 40%, 69%);
@@ -32,22 +39,14 @@ const variables = css`
     --color-secondary-A800: hsl(296, 25%, 23%);
     --color-secondary-900: hsl(260, 30%, 18%);
 
-    --color-tertiary-100: hsl(201, 80%, 81%);
-    --color-tertiary-200: hsl(203, 60%, 70%);
-    --color-tertiary-300: hsl(203, 27%, 58%);
-    --color-tertiary-400: hsl(201, 26%, 48%);
-    --color-tertiary-500: hsl(201, 37%, 40%);
-    --color-tertiary-600: hsl(200, 40%, 34%);
-    --color-tertiary-700: hsl(199, 46%, 27%);
-    --color-tertiary-800: hsl(200, 53%, 20%);
-    --color-tertiary-900: hsl(198, 83%, 12%);
-
     --color-grey-100: hsl(240, 0%, 84%);
     --color-grey-200: hsl(240, 3%, 77%);
     --color-grey-300: hsl(240, 5%, 50%);
     --color-grey-500: hsl(240, 8%, 30%);
     --color-grey-700: hsl(240, 10%, 12%);
     --color-grey-900: hsl(240, 10%, 8%);
+
+    --color-text-highlight: #ffd780;
 
     --sidebar-color: var(--color-grey-900);
     --sidebar-text-color: hsl(0, 0%, 84%);

@@ -6,7 +6,7 @@ import StyledSectionHeading from "../ui/StyledSectionHeading";
 
 const About = (props) => {
   return (
-    <StyledSection color="var(--color-primary-A1100)">
+    <StyledSection color="var(--color-primary-900)">
       <Inner>
         <FlexWrapper>
           <StyledSectionWrapper>
@@ -58,7 +58,7 @@ const FlexWrapper = styled.div`
   //${helpers.card}
 
   border-radius: var(--radius-subtle);
-  background-color: var(--color-primary-A1000);
+  background-color: var(--color-primary-700);
 `;
 
 const StyledSectionWrapper = styled.section`

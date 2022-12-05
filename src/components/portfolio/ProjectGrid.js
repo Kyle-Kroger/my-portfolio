@@ -7,7 +7,7 @@ import Project from "./Project";
 
 const ProjectGrid = (props) => {
   return (
-    <StyledSection color="var(--color-primary-A1100)">
+    <StyledSection color="var(--color-primary-900)">
       <StyledSectionHeading text={"Portfolio"} />
       <GridWrapper>
         <StyledProject

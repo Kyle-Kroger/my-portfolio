@@ -37,7 +37,7 @@ const Project = (props) => {
             earum in! Laborum, facere.
           </p>
         </div>
-        <StyledButton href="#v" width="250px">
+        <StyledButton href="#v" width="fit-content">
           Learn More
         </StyledButton>
       </DescriptionBox>
@@ -51,7 +51,7 @@ const StyledWrapper = styled.section`
   //padding: var(--spacing-lg) var(--spacing-sm);
   padding-bottom: 0;
   border-radius: var(--radius-subtle);
-  background-color: var(--color-primary-A1000);
+  background-color: var(--color-primary-700);
 
   ${(p) =>
     p.featured &&
@@ -100,12 +100,12 @@ const Title = styled.section`
   h3 {
     width: 100%;
     color: white;
-    border-bottom: 4px solid var(--color-primary-A900);
+    border-bottom: 4px solid var(--color-primary-600);
     padding-bottom: var(--spacing-sm);
   }
 
   h4 {
-    color: var(--color-secondary-100);
+    color: var(--color-text-highlight);
   }
 
   ul {
@@ -118,6 +118,7 @@ const Title = styled.section`
   li {
     font-family: "Roboto", "sans-serif";
     color: var(--color-grey-200);
+    font-weight: 700;
     margin-bottom: var(--spacing-xs);
   }
 `;
@@ -151,7 +152,7 @@ const DescriptionBox = styled.div`
   margin-top: var(--spacing-md);
   color: var(--color-grey-100);
   font-size: var(--fz-md);
-  background-color: var(--color-primary-A900);
+  background-color: var(--color-primary-600);
 
   p {
     padding: var(--spacing-md) 0;
