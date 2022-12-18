@@ -24,6 +24,7 @@ const variables = css`
     --color-primary-600: hsl(235, 43%, 22%);
     --color-primary-700: hsl(234, 48%, 17%);
     --color-primary-700T: hsl(234 48% 17% / 0.9);
+    --color-primary-800: hsl(232, 52%, 15%);
     --color-primary-900: hsl(230, 57%, 12%);
     --color-primary-900T: hsl(230 57% 12% / 0.9);
 

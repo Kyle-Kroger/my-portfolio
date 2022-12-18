@@ -20,14 +20,20 @@ const Inner = styled.div`
 const SkillWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
+  align-self: center;
+  justify-content: left;
   gap: var(--spacing-sm);
   padding: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+  border: 1px solid var(--color-primary-700);
+  background-color: var(--color-primary-700);
+  border-radius: var(--radius-small);
 `;
 
 const MySkills = (props) => {
   return (
     <StyledSection color="var(--color-primary-900)">
-      <StyledSectionHeading text="My Skills" />
+      <StyledSectionHeading text="Skills" />
       <Inner>
         <p>
           Throughout my time learning I have picked up many different skills
@@ -37,13 +43,13 @@ const MySkills = (props) => {
           Next.js, Prisma, and SQL skills by building a D&D spellbook app.
         </p>
         <SkillWrapper>
+          <Skill name={"html5"} />
+          <Skill name={"css"} />
+          <Skill name={"javascript"} />
           <Skill name={"React"} />
-          <Skill name={"React"} />
-          <Skill name={"React"} />
-          <Skill name={"React"} />
-          <Skill name={"React"} />
-          <Skill name={"React"} />
-          <Skill name={"React"} />
+          <Skill name={"styledComponents"} />
+          <Skill name={"Tailwind"} />
+          <Skill name={"nextjs"} />
           <Skill name={"React"} />
           <Skill name={"React"} />
           <Skill name={"React"} />
