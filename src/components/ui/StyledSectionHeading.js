@@ -12,17 +12,19 @@ const StyledSectionHeading = (props) => {
 };
 
 const StyledWrapper = styled.div`
-  ${helpers.flexCenter}
+  ${helpers.maxWidthWrapper}
+  display: flex;
+  justify-content: left;
   flex-direction: column;
   text-transform: uppercase;
   font-family: "Lora", "serif";
+  padding: 0 var(--spacing-lg);
 `;
 
 const Divider = styled.div`
-  width: 32%;
-  min-width: 250px;
+  width: 100%;
   height: 2px;
-  background-color: var(--color-primary-200);
+  background-color: var(--color-primary-500);
   margin-top: 4px;
   margin-bottom: var(--spacing-xl);
 `;

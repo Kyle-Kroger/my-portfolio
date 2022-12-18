@@ -8,7 +8,7 @@ import {
   MobileHeader,
 } from "./components/layout";
 import { Hero } from "./components/banner";
-import { ProjectGrid } from "./components/portfolio";
+import { ProjectGrid, MySkills } from "./components/portfolio";
 import { About } from "./components/about";
 
 import { useState } from "react";
@@ -40,8 +40,8 @@ function App() {
         <MobileHeader toggleSidebar={toggleSidebar}></MobileHeader>
         <Hero url={background}></Hero>
         <About></About>
+        <MySkills />
         <ProjectGrid> </ProjectGrid>
-        <Services></Services>
         <Contact></Contact>
         <Footer></Footer>
       </PageWrapper>

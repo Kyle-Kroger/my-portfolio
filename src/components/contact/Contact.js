@@ -3,7 +3,7 @@ import { StyledSection, StyledSectionHeading } from "../ui";
 
 const Contact = (props) => {
   return (
-    <StyledSection color="var(--color-primary-A1100)">
+    <StyledSection color="var(--color-primary-900)">
       <StyledSectionHeading text="Contact" />
       <p>
         I'm always looking for new opportunities! Feel free to send me a message
