@@ -14,6 +14,8 @@ const Inner = styled.div`
 
   p {
     font-family: "Roboto", "sans-serif";
+    font-size: var(--fz-lg);
+    color: var(--color-grey-200);
   }
 `;
 
@@ -23,7 +25,7 @@ const SkillWrapper = styled.div`
   align-self: center;
   justify-content: left;
   gap: var(--spacing-sm);
-  padding: var(--spacing-md);
+  padding: var(--spacing-md) 4px;
   margin: var(--spacing-md) 0;
   border: 1px solid var(--color-primary-700);
   background-color: var(--color-primary-700);
@@ -46,15 +48,17 @@ const MySkills = (props) => {
           <Skill name={"html5"} />
           <Skill name={"css"} />
           <Skill name={"javascript"} />
+          <Skill name="typescript" />
           <Skill name={"React"} />
           <Skill name={"styledComponents"} />
           <Skill name={"Tailwind"} />
           <Skill name={"nextjs"} />
-          <Skill name={"React"} />
-          <Skill name={"React"} />
-          <Skill name={"React"} />
-          <Skill name={"React"} />
-          <Skill name={"React"} />
+          <Skill name={"Mongodb"} />
+          <Skill name={"nodejs"} />
+          <Skill name={"express"} />
+          <Skill name={"postgresql"} />
+          <Skill name={"prisma"} />
+          <Skill name={"git"} />
         </SkillWrapper>
       </Inner>
     </StyledSection>
