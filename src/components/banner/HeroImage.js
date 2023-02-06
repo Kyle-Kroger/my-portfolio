@@ -68,7 +68,7 @@ const Overlay = styled.div`
   width: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.55);
 `;
 
 export default HeroImage;
