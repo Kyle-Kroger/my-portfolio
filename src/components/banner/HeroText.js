@@ -19,7 +19,7 @@ const HeroText = ({ className, children }) => {
         designing fullstack web applications. If you're interested in building
         something together click the button to learn more!
       </p>
-      <StyledButton width="fit-content">Let's Connect!</StyledButton>
+      {/* <StyledButton width="fit-content">Let's Connect!</StyledButton> */}
     </StyledWrapper>
   );
 };
@@ -30,17 +30,19 @@ const StyledWrapper = styled.section`
   justify-content: center;
   align-items: center;
   text-align: center;
-  max-width: 1100px;
+  max-width: 1000px;
   font-family: "Lora", serif;
-  color: white;
-  background-color: var(--color-primary-700T);
-  padding: 48px;
-  border-radius: var(--radius-subtle);
-  opacity: 0;
+  background-color: var(--sidebar-color);
+  padding: 3rem;
+  border-radius: var(--radius-small);
   animation: ${animations.fadeIn} 2s ease-in-out 500ms;
   animation-fill-mode: forwards;
 
   transition: all 400ms;
+
+  h1 {
+    color: var(--color-primary-200);
+  }
 
   p {
     margin: var(--spacing-lg) 0;
