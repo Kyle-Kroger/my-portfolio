@@ -24,15 +24,18 @@ const HeroImage = (props) => {
   }, [url, firstRender]);
 
   return (
-    <HeroImgBackground
-      className={className}
-      url={url}
-      newUrl={newUrl}
-      height={height}
-      animated={animated}
-    >
-      {children}
-    </HeroImgBackground>
+    <>
+      <HeroImgBackground
+        className={className}
+        url={url}
+        newUrl={newUrl}
+        height={height}
+        animated={animated}
+      >
+        {children}
+      </HeroImgBackground>
+      <Overlay />
+    </>
   );
 };
 
@@ -57,6 +60,15 @@ const HeroImgBackground = styled.div`
       pointer-events: none;
       animation: ${changeBg(p.url, p.newUrl)} 2s ease-in-out 200ms;
     `}
+`;
+
+const Overlay = styled.div`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.55);
 `;
 
 export default HeroImage;

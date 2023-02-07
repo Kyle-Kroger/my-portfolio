@@ -49,7 +49,7 @@ const variables = css`
 
     --color-text-highlight: #ffd780;
 
-    --sidebar-color: var(--color-grey-900);
+    --sidebar-color: hsl(230, 57%, 6%);
     --sidebar-text-color: hsl(0, 0%, 84%);
     --side-bar-text-faded: hsl(230, 15%, 52%);
     --main-color: var(--color-primary-A900);
@@ -119,7 +119,7 @@ const variables = css`
     /* Images */
 
     /* Sizing */
-    --sidebar-width: 220px;
+    --sidebar-width: 200px;
     --content-max-width: 1400px;
   }
 `;

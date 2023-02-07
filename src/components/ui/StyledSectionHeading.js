@@ -26,7 +26,7 @@ const Divider = styled.div`
   height: 2px;
   background-color: var(--color-primary-500);
   margin-top: 4px;
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
 `;
 
 export default StyledSectionHeading;

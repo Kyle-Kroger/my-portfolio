@@ -33,10 +33,6 @@ const Sidebar = (props) => {
 
   return (
     <SidebarWrapper showSidebar={props.showSidebar}>
-      <ProfileImgWrapper>
-        <img src="/img/profile.png" alt="profile-img" />
-        <div />
-      </ProfileImgWrapper>
       <StyledNav>
         <ul>
           <a href="#f">
@@ -98,27 +94,11 @@ const SidebarWrapper = styled.div`
   }
 `;
 
-const ProfileImgWrapper = styled.figure`
-  position: relative;
-  width: 100%;
-  padding: var(--spacing-md) var(--spacing-lg);
-  padding-bottom: 0;
-
-  img {
-    box-shadow: var(--shadow-elevation-medium-dark);
-    border-radius: 30%;
-  }
-
-  div {
-    width: 100%;
-    height: 1px;
-    background-color: var(--color-primary-100);
-    margin-top: var(--spacing-md);
-  }
-`;
-
 const StyledNav = styled.nav`
+  margin-top: 4rem;
   width: 100%;
+  /* Hidding overflow for the growing hover list items */
+  overflow: hidden;
 
   a {
     display: block;
@@ -143,11 +123,13 @@ const StyledNav = styled.nav`
   ul li:hover {
     background-color: var(--color-primary-700);
     color: white;
+    transform: scale(1.1);
   }
 `;
 
 const StyledIcon = styled(FontAwesomeIcon)`
   padding-right: 8px;
+  color: var(--color-primary-100);
 `;
 
 const ThemeIcon = styled(FontAwesomeIcon)`

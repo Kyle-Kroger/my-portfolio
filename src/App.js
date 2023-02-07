@@ -16,7 +16,9 @@ import { Contact, Services } from "./components/contact";
 
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
-  const [background, setBackground] = useState("/img/nightRiverHero.jpg");
+  const [background, setBackground] = useState(
+    "/img/software-process-darker.jpg"
+  );
 
   const toggleSidebar = () => {
     setShowSidebar((prevState) => !prevState);

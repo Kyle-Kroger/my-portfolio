@@ -1,7 +1,16 @@
 import styled from "styled-components/macro";
 import { ReactLogo, Html5, Css3 } from "@styled-icons/fa-brands";
-import { Javascript, TailwindCss } from "@styled-icons/boxicons-logos";
-import { Styledcomponents, Nextdotjs } from "@styled-icons/simple-icons";
+import { Javascript, TailwindCss, Git } from "@styled-icons/boxicons-logos";
+import {
+  Styledcomponents,
+  Nextdotjs,
+  Mongodb,
+  Nodedotjs,
+  Express,
+  Postgresql,
+  Prisma,
+  Typescript,
+} from "@styled-icons/simple-icons";
 import helpers from "../../styles/helpers";
 
 const ICONS = {
@@ -47,13 +56,55 @@ const ICONS = {
       return <Nextdotjs size={32} color={"#0c0c0c"} />;
     },
   },
+  mongodb: {
+    name: "MongoDB",
+    icon: () => {
+      return <Mongodb size={32} color={"#4DA640"} />;
+    },
+  },
+  nodejs: {
+    name: "Node.js",
+    icon: () => {
+      return <Nodedotjs size={32} color={"#7FC728"} />;
+    },
+  },
+  express: {
+    name: "Express",
+    icon: () => {
+      return <Express size={32} color={"white"} />;
+    },
+  },
+  postgresql: {
+    name: "PostgreSQL",
+    icon: () => {
+      return <Postgresql size={32} color={"white"} />;
+    },
+  },
+  prisma: {
+    name: "Prisma",
+    icon: () => {
+      return <Prisma size={32} color={"black"} />;
+    },
+  },
+  typescript: {
+    name: "Typescript",
+    icon: () => {
+      return <Typescript size={32} color={"#2F72BC"} />;
+    },
+  },
+  git: {
+    name: "Git",
+    icon: () => {
+      return <Git size={32} color={"#E44C30"} />;
+    },
+  },
 };
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   padding: 2px var(--spacing-sm);
   border-radius: var(--radius-subtle);
   h5 {
