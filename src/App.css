@@ -46,3 +46,28 @@
   font-weight: 400 700;
   font-style: italic;
 }
+@font-face {
+  font-family: "Barlow";
+  src: url("../public/fonts/Barlow-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("../public/fonts/Barlow-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("../public/fonts/Barlow-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("../public/fonts/Barlow-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}

@@ -16,9 +16,9 @@ const StyledWrapper = styled.div`
   display: flex;
   justify-content: left;
   flex-direction: column;
-  text-transform: uppercase;
-  font-family: "Lora", "serif";
-  padding: 0 var(--spacing-lg);
+  text-transform: capitalize;
+  font-family: "Barlow", "serif";
+  font-weight: 700;
 `;
 
 const Divider = styled.div`

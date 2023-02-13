@@ -3,7 +3,7 @@ import { animations, helpers } from "../../styles";
 import { StyledButton } from "../ui";
 
 const HEADER_TEXT = [
-  "Hi, I'm Kyle Kroger",
+  "Kyle Kroger",
   "Looking to establish a web presence?",
   "I would love to help you!",
   "Shoot me an email for a consultation",
@@ -29,16 +29,18 @@ const HeroText = ({ className, children }) => {
 };
 
 const StyledWrapper = styled.section`
+  position: fixed;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   max-width: 1150px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Barlow", sans-serif;
   background-color: #0f0d2c;
   padding: 3rem;
-  border-radius: var(--radius-large);
+  border-radius: var(--radius-subtle);
   animation: ${animations.fadeIn} 2s ease-in-out 500ms;
   animation-fill-mode: forwards;
 

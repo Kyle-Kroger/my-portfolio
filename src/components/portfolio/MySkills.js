@@ -27,16 +27,16 @@ const SkillWrapper = styled.div`
   gap: var(--spacing-sm);
   padding: var(--spacing-md) 4px;
   margin: var(--spacing-md) 0;
-  border: 1px solid var(--color-primary-700);
-  background-color: var(--color-primary-700);
+  /* border: 1px solid var(--color-primary-700); */
+  /* background-color: var(--color-primary-700); */
   border-radius: var(--radius-small);
 `;
 
 const MySkills = (props) => {
   return (
     <StyledSection color="var(--color-primary-900)">
-      <StyledSectionHeading text="Skills" />
       <Inner>
+        <StyledSectionHeading text="Skills" />
         <p>
           Throughout my time learning I have picked up many different skills
           both from my degree and self learning. Shout out to Josh Comeau's CSS

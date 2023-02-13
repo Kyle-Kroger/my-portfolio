@@ -40,9 +40,8 @@ const GlobalStyle = createGlobalStyle`
     font-size: clamp(
       1.2rem,
       2vw + 1rem,
-      2.5rem
+      2.8rem
     );
-    font-weight: 500;
   }
 
   h3 {
