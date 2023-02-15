@@ -1,9 +1,10 @@
 import styled from "styled-components/macro";
 import { animations, helpers } from "../../styles";
-import { StyledButton } from "../ui";
+import { StyledButton, StyledPhotoCard } from "../ui";
+import { QUERIES } from "../../constants";
 
 const HEADER_TEXT = [
-  "Kyle Kroger",
+  "Hi, I'm Kyle Kroger",
   "Looking to establish a web presence?",
   "I would love to help you!",
   "Shoot me an email for a consultation",
@@ -13,15 +14,14 @@ const HEADER_TEXT = [
 const HeroText = ({ className, children }) => {
   return (
     <StyledWrapper className={className}>
-      {/* Needs a little headshot picture up here */}
       <h1>{HEADER_TEXT[0]}</h1>
+      <h2>-- Fullstack Software Engineer --</h2>
       <p>
-        I’m a software engineer that specializes in building and occasionally
-        designing fullstack web applications. If you're interested in building
-        something together click the button to learn more!
+        I specialize in building and occasionally designing fullstack web
+        applications. If you're interested in building something together click
+        the button to learn more!
       </p>
-      <Divider />
-      <StyledButton href="#v" width="40%">
+      <StyledButton href="#v" width="fit-content">
         Let's Connect!
       </StyledButton>
     </StyledWrapper>
@@ -34,11 +34,9 @@ const StyledWrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  max-width: 1150px;
+  max-width: 1100px;
+  height: 100%;
   font-family: "Barlow", sans-serif;
-  background-color: #0f0d2c;
   padding: 3rem;
   border-radius: var(--radius-subtle);
   animation: ${animations.fadeIn} 2s ease-in-out 500ms;
@@ -47,21 +45,25 @@ const StyledWrapper = styled.section`
   transition: all 400ms;
 
   h1 {
-    letter-spacing: 0.065em;
+    letter-spacing: 0.05em;
   }
 
   p {
     font-family: "lora", serif;
-    margin: var(--spacing-md) 0;
+    margin: 3rem 0 4rem;
     font-size: var(--fz-lg);
     color: var(--color-grey-100);
+  }
+
+  @media ${QUERIES.tabetAndDown} {
+    padding: 3rem;
   }
 `;
 
 const Divider = styled.div`
-  width: 100%;
-  height: 3px;
-  background-color: var(--color-primary-700);
+  width: 90%;
+  height: 2px;
+  background-color: var(--color-primary-200);
   margin-top: 4px;
   margin-bottom: var(--spacing-md);
 `;

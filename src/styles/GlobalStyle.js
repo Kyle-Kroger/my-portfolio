@@ -29,9 +29,9 @@ const GlobalStyle = createGlobalStyle`
 
   h1 {
     font-size: clamp(
-      1.5rem,
-      2vw + 1rem,
-      3.5rem
+      2rem,
+      2.2vw + 1.5rem,
+      4rem
     );
     font-weight: 700;
   }
