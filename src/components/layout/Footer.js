@@ -35,7 +35,7 @@ const StyledWrapper = styled.footer`
   flex-direction: column;
   width: 100%;
   min-height: 12vh;
-  background-color: var(--color-grey-700);
+  background-color: var(--color-primary-900);
   padding: var(--spacing-lg);
 
   & > p {

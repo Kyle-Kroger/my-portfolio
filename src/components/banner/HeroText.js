@@ -30,7 +30,6 @@ const HeroText = ({ className, children }) => {
 
 const StyledWrapper = styled.section`
   position: fixed;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,6 +38,7 @@ const StyledWrapper = styled.section`
   font-family: "Barlow", sans-serif;
   padding: 3rem;
   border-radius: var(--radius-subtle);
+  opacity: 0;
   animation: ${animations.fadeIn} 2s ease-in-out 500ms;
   animation-fill-mode: forwards;
 

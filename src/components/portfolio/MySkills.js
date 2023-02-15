@@ -34,7 +34,7 @@ const SkillWrapper = styled.div`
 
 const MySkills = (props) => {
   return (
-    <StyledSection color="var(--color-primary-900)">
+    <StyledSection color="linear-gradient(0deg, #000000, #03030b, #070613, #0a0919, #0d0c1f, #0e0e24, #0e112a, #0d1330)">
       <Inner>
         <StyledSectionHeading text="Skills" />
         <p>

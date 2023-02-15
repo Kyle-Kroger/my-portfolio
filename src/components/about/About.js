@@ -6,11 +6,11 @@ import StyledSectionHeading from "../ui/StyledSectionHeading";
 
 const About = (props) => {
   return (
-    <StyledSection color="var(--color-primary-900)">
+    <StyledSection color="linear-gradient(0deg, #0d1330, #0e112a, #0e0e24, #0d0c1f, #0a0919, #070613, #03030b, #000000)">
       <Inner>
         <FlexWrapper>
           <StyledSectionWrapper>
-            <StyledSectionHeading text="Hi, I'm Kyle!" />
+            <StyledSectionHeading text="More About Me" />
             <h4>I'm a Software Engineer located in St. Paul, MN</h4>
             <p>
               I've always enjoyed solving problems and building things. In
@@ -46,6 +46,7 @@ const Inner = styled.div`
   ${helpers.maxWidthWrapper}
   display: flex;
   flex-direction: column;
+  padding-top: 6rem;
 
   border-radius: var(--radius-subtle);
   /* background-color: var(--color-primary-700); */
