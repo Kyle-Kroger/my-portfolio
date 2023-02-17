@@ -6,7 +6,7 @@ import StyledSectionHeading from "../ui/StyledSectionHeading";
 
 const About = (props) => {
   return (
-    <StyledSection color="linear-gradient(0deg, #0d1330, #0e112a, #0e0e24, #0d0c1f, #0a0919, #070613, #03030b, #000000)">
+    <ImageSection color="linear-gradient(0deg, rgba(3, 3, 5, 1) 1%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url('/img/space-three.png')">
       <Inner>
         <FlexWrapper>
           <StyledSectionWrapper>
@@ -38,15 +38,20 @@ const About = (props) => {
           </PhotoCardWrapper>
         </FlexWrapper>
       </Inner>
-    </StyledSection>
+    </ImageSection>
   );
 };
+
+const ImageSection = styled(StyledSection)`
+  background-size: stretch;
+  background-position: 30% 35%;
+`;
 
 const Inner = styled.div`
   ${helpers.maxWidthWrapper}
   display: flex;
   flex-direction: column;
-  padding-top: 6rem;
+  padding-top: 3rem;
 
   border-radius: var(--radius-subtle);
   /* background-color: var(--color-primary-700); */

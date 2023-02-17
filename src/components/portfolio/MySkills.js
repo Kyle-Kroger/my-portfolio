@@ -8,9 +8,9 @@ const Inner = styled.div`
   display: flex;
   flex-direction: column;
 
-  padding: 0 var(--spacing-lg);
+  padding: var(--spacing-md) var(--spacing-lg);
   border-radius: var(--radius-subtle);
-  background-color: var(--color-primary-900);
+  background-color: var(--color-primary-900T);
 
   p {
     font-family: "Roboto", "sans-serif";
@@ -34,7 +34,7 @@ const SkillWrapper = styled.div`
 
 const MySkills = (props) => {
   return (
-    <StyledSection color="linear-gradient(0deg, #000000, #03030b, #070613, #0a0919, #0d0c1f, #0e0e24, #0e112a, #0d1330)">
+    <StyledSection color="url('/img/space-two.png')">
       <Inner>
         <StyledSectionHeading text="Skills" />
         <p>
