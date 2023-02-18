@@ -11,7 +11,10 @@ const About = (props) => {
         <FlexWrapper>
           <StyledSectionWrapper>
             <StyledSectionHeading text="More About Me" />
-            <h4>Hi! I'm a Software Engineer located in St. Paul, MN</h4>
+            <h4>
+              Hi! I'm a Software Engineer located in St. Paul, MN{" "}
+              {process.env.REACT_APP_TESTCODE}
+            </h4>
             <p>
               Every since I was little I have always enjoyed building things and
               solving problems. Building applications that focus on
