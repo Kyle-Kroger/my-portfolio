@@ -11,22 +11,22 @@ const About = (props) => {
         <FlexWrapper>
           <StyledSectionWrapper>
             <StyledSectionHeading text="More About Me" />
-            <h4>I'm a Software Engineer located in St. Paul, MN</h4>
+            <h4>Hi! I'm a Software Engineer located in St. Paul, MN</h4>
             <p>
-              I've always enjoyed solving problems and building things. In
-              middle school when I stumbled into coding which let me do both of
-              those things I fell in love. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Laudantium animi rem tempora, maxime
-              deserunt doloribus officia adipisci deleniti delectus, minima
-              laboriosam atque, id cupiditate! Distinctio odit maxime autem
-              deserunt sit!
+              Every since I was little I have always enjoyed building things and
+              solving problems. Building applications that focus on
+              responsiveness and user experience is what's important to me.
+            </p>
+            <p>
+              I have an associate of applied science in software development
+              from DCTC.
             </p>
             <p>
               When I'm not coding or learning I enjoy reading, playing video
-              games with friends, and creating worlds for D&D Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Vitae cum molestias
-              doloremque ex eum laborum tenetur est enim recusandae totam iste
-              aperiam praesentium dolorem vel, nulla corrupti neque beatae qui!
+              games with friends, and creating worlds and stories for my d&d
+              campaign. Feel free to contact me with any questions or even just
+              to say hello. I always enjoy hearing from new people and learning
+              what they are working on!
             </p>
           </StyledSectionWrapper>
           <PhotoCardWrapper>
