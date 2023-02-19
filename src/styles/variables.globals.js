@@ -48,6 +48,7 @@ const variables = css`
     --color-grey-900: hsl(240, 10%, 8%);
 
     --color-text-highlight: #ffd780;
+    --color-text-error: #e44e4e;
 
     --sidebar-color: hsl(230, 7%, 5%);
     --sidebar-text-color: hsl(0, 0%, 84%);

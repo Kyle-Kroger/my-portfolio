@@ -1,6 +1,7 @@
 import styled from "styled-components/macro";
 import { StyledSection, StyledSectionHeading } from "../ui";
 import { helpers } from "../../styles";
+import ContactForm from "./ContactForm";
 
 const Inner = styled.div`
   ${helpers.maxWidthWrapper}
@@ -12,6 +13,7 @@ const Inner = styled.div`
 
   p {
     font-family: "Roboto", "sans-serif";
+    margin-bottom: var(--spacing-md);
   }
 `;
 
@@ -29,8 +31,9 @@ const Contact = (props) => {
         <p>
           If you're looking to build a website I would love to help you build
           the one of your dreams! Send me a message with your ideas and I'll
-          respond back within 48 hours so we can set up a time to talk
+          respond back within 48 hours so we can set up a time to talk.
         </p>
+        <ContactForm />
       </Inner>
     </StyledSection>
   );

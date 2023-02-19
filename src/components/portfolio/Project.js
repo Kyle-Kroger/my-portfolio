@@ -149,9 +149,10 @@ const DescriptionBox = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  width: 94%;
   padding: var(--spacing-md);
   padding-top: 0;
+  margin: 0 auto;
   margin-top: var(--spacing-md);
   color: var(--color-grey-100);
   font-size: var(--fz-md);
