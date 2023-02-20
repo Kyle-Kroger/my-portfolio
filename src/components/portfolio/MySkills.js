@@ -34,8 +34,8 @@ const SkillWrapper = styled.div`
 const MySkills = (props) => {
   return (
     <StyledSection color="url('/img/space-two.png')">
+      <StyledSectionHeading text="Skills" />
       <Inner>
-        <StyledSectionHeading text="Skills" />
         <p>
           Throughout my time learning I've picked up many skills both from my
           degree and self learning. Currently I am working on my Next.js,

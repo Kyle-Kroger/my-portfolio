@@ -19,6 +19,7 @@ const StyledWrapper = styled.div`
   text-transform: capitalize;
   font-family: "Barlow", "serif";
   font-weight: 700;
+  padding: 0 var(--spacing-lg);
 `;
 
 const Divider = styled.div`

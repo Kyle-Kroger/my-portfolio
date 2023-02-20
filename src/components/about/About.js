@@ -51,7 +51,6 @@ const Inner = styled.div`
   ${helpers.maxWidthWrapper}
   display: flex;
   flex-direction: column;
-  padding-top: 3rem;
 
   border-radius: var(--radius-subtle);
   /* background-color: var(--color-primary-700); */
@@ -63,18 +62,19 @@ const Inner = styled.div`
 
 const FlexWrapper = styled.div`
   display: flex;
-  //${helpers.topBottomBorder("6px", "var(--color-primary-A1000)")}
-  //${helpers.card}
 `;
 
 const StyledSectionWrapper = styled.section`
-  padding: var(--spacing-lg);
   flex: 1;
 
   p {
     font-size: var(--fz-lg);
     color: var(--color-grey-200);
-    padding: var(--spacing-md) 0;
+  }
+
+  p,
+  h4 {
+    padding: var(--spacing-sm) var(--spacing-lg);
   }
 `;
 

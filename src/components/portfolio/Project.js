@@ -51,7 +51,7 @@ const StyledWrapper = styled.section`
   //padding: var(--spacing-lg) var(--spacing-sm);
   padding-bottom: 0;
   border-radius: var(--radius-subtle);
-  background-color: var(--color-primary-700);
+  background-color: var(--color-primary-900T);
 
   ${(p) =>
     p.featured &&
@@ -100,7 +100,7 @@ const Title = styled.section`
   h3 {
     width: 100%;
     color: white;
-    border-bottom: 4px solid var(--color-primary-600);
+    border-bottom: 3px solid var(--color-primary-500);
     padding-bottom: var(--spacing-sm);
   }
 
@@ -125,12 +125,15 @@ const Title = styled.section`
 
 const PhotoCardWrapper = styled.section`
   padding: var(--spacing-md);
+  margin: 0 auto;
+  max-width: 550px;
 
   ${(p) =>
     p.featured &&
     css`
       flex: 1.2;
       min-width: 40%;
+      max-width: 1000px;
       padding: var(--spacing-lg);
       padding-left: 0;
       padding-bottom: 0;
@@ -152,7 +155,8 @@ const DescriptionBox = styled.div`
   margin-top: var(--spacing-md);
   color: var(--color-grey-100);
   font-size: var(--fz-md);
-  background-color: var(--color-primary-600);
+  border-top: 3px solid var(--color-primary-500);
+  /* background-color: var(--color-primary-600); */
 
   p {
     padding: var(--spacing-md) 0;
