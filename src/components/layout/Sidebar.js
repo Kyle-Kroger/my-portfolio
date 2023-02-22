@@ -35,25 +35,25 @@ const Sidebar = (props) => {
     <SidebarWrapper showSidebar={props.showSidebar}>
       <StyledNav>
         <ul>
-          <a href="#f">
+          <a href="#top">
             <li>
               <StyledIcon icon={faHome}></StyledIcon>
               Home
             </li>
           </a>
-          <a href="#h">
+          <a href="#about">
             <li>
               <StyledIcon icon={faUser}></StyledIcon>
               About
             </li>
           </a>
-          <a href="#f">
+          <a href="#portfolio">
             <li>
               <StyledIcon icon={faImagePortrait}></StyledIcon>
               Portfolio
             </li>
           </a>
-          <a href="#i">
+          <a href="#contact">
             <li>
               <StyledIcon icon={faEnvelope}></StyledIcon>
               Contact

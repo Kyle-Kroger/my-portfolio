@@ -10,7 +10,7 @@ const About = (props) => {
       <Inner>
         <FlexWrapper>
           <StyledSectionWrapper>
-            <StyledSectionHeading text="More About Me" />
+            <StyledSectionHeading text="More About Me" sectionId="about" />
             <h4>Hi! I'm a Software Engineer located in St. Paul, MN</h4>
             <p>
               Every since I was little I have always enjoyed building things and

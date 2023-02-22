@@ -41,7 +41,7 @@ const projects = [
 const ProjectGrid = (props) => {
   return (
     <StyledSection color="var(--project-background)">
-      <StyledSectionHeading text={"Portfolio"} />
+      <StyledSectionHeading text={"Portfolio"} sectionId="portfolio" />
       <GridWrapper>
         {projects.map((project, i) => {
           return (

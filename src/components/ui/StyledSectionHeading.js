@@ -2,10 +2,10 @@ import styled from "styled-components/macro";
 import { helpers } from "../../styles";
 
 const StyledSectionHeading = (props) => {
-  const { text } = props;
+  const { text, sectionId } = props;
   return (
     <StyledWrapper>
-      <h2>{text}</h2>
+      <h2 id={sectionId}>{text}</h2>
       <Divider />
     </StyledWrapper>
   );
