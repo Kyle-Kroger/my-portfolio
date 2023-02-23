@@ -5,18 +5,59 @@ import { StyledSection, StyledSectionHeading } from "../ui";
 
 import Project from "./Project";
 
+const projects = [
+  {
+    title: "Playlist Manager for Spotify",
+    desc: "Meow test. This is a project that allows one to build a playlist",
+    techStack: ["TypeScript", "NextJs", "Styled Components", "MongoDB"],
+    featured: true,
+    imgSrc: "",
+    imgDes: "",
+    link: "",
+    gitLink: "",
+  },
+  {
+    title: "Othello",
+    desc: "Meow test. This is a project that allows one to build a playlist",
+    techStack: ["TypeScript", "NextJs", "Styled Components", "MongoDB"],
+    featured: false,
+    imgSrc: "",
+    imgDes: "",
+    link: "",
+    gitLink: "",
+  },
+  {
+    title: "The Black Lantern",
+    desc: "Meow test. This is a project that allows one to build a playlist",
+    featured: false,
+    techStack: ["TypeScript", "NextJs", "Styled Components", "MongoDB"],
+    imgSrc: "",
+    imgDes: "",
+    link: "",
+    gitLink: "",
+  },
+];
+
 const ProjectGrid = (props) => {
   return (
     <StyledSection color="var(--project-background)">
       <StyledSectionHeading text={"Portfolio"} />
       <GridWrapper>
-        <StyledProject
-          title="Spotify Playlist Manager"
-          featured
-          className="featured"
-        ></StyledProject>
-        <StyledProject title="Project 1"></StyledProject>
-        <StyledProject title="Project 2"></StyledProject>
+        {projects.map((project, i) => {
+          return (
+            <StyledProject
+              title={project.title}
+              desc={project.desc}
+              techStack={project.techStack}
+              imgScr={project.imgSrc}
+              imgDes={project.imgDes}
+              link={project.link}
+              gitLink={project.gitLink}
+              featured={project.featured}
+              className={project.featured ? "featured" : ""}
+            />
+          );
+        })}
       </GridWrapper>
     </StyledSection>
   );
@@ -28,7 +69,7 @@ const GridWrapper = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
-  justify-items: center;
+  justify-items: stretch;
 
   @media ${QUERIES.tabetAndDown} {
     gap: var(--spacing-xl);
