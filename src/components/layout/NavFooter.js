@@ -11,9 +11,20 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 const NavFooter = (props) => {
   return (
     <Wrapper>
-      <StyledIcon icon={faTwitter} />
-      <StyledIcon icon={faGit} />
-      <StyledIcon icon={faLinkedin} />
+      <a href="https://twitter.com/KS_Kroger" target="_blank" rel="noreferrer">
+        <StyledIcon icon={faTwitter} />
+      </a>
+
+      <a href="https://github.com/Kyle-Kroger" target="_blank" rel="noreferrer">
+        <StyledIcon icon={faGit} />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/kyle-kroger-5a70a4231/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <StyledIcon icon={faLinkedin} />
+      </a>
       <a href="mailto: kyle.s.kroger@gmail.com">
         <StyledIcon icon={faEnvelope} />
       </a>
