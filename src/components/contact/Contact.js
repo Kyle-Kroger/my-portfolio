@@ -32,6 +32,10 @@ const Contact = (props) => {
           the one of your dreams! Send me a message with your ideas and I'll
           respond back within 48 hours so we can set up a time to talk.
         </p>
+        <p>
+          If you prefer to send me a direct email, my email address is
+          kyle.s.kroger@gmail.com. I look forward to hearing from you!
+        </p>
         <ContactForm />
       </Inner>
     </StyledSection>

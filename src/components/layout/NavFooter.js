@@ -14,7 +14,9 @@ const NavFooter = (props) => {
       <StyledIcon icon={faTwitter} />
       <StyledIcon icon={faGit} />
       <StyledIcon icon={faLinkedin} />
-      <StyledIcon icon={faEnvelope} />
+      <a href="#contact">
+        <StyledIcon icon={faEnvelope} />
+      </a>
     </Wrapper>
   );
 };
@@ -28,6 +30,12 @@ const Wrapper = styled.div`
 
   * {
     flex: 1;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
