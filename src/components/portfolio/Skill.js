@@ -53,7 +53,7 @@ const ICONS = {
   nextjs: {
     name: "Next.js",
     icon: () => {
-      return <Nextdotjs size={32} color={"#0c0c0c"} />;
+      return <Nextdotjs size={32} color={"#ffffff"} />;
     },
   },
   mongodb: {
@@ -83,7 +83,7 @@ const ICONS = {
   prisma: {
     name: "Prisma",
     icon: () => {
-      return <Prisma size={32} color={"black"} />;
+      return <Prisma size={32} color={"#fff"} />;
     },
   },
   typescript: {

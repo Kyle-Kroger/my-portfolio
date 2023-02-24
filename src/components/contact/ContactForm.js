@@ -43,7 +43,7 @@ const FormTextarea = styled.textarea`
   resize: none;
 `;
 
-const ContactForm = () => {
+const ContactForm = ({ setShowForm }) => {
   const form = useRef();
 
   const [name, setName] = useState("");
@@ -81,6 +81,7 @@ const ContactForm = () => {
       );
 
     console.log("Submitted:", { name, email, message });
+    setShowForm(false);
 
     // Clear form fields
     setName("");
