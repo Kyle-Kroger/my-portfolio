@@ -10,7 +10,7 @@ const About = (props) => {
       <Inner>
         <FlexWrapper>
           <StyledSectionWrapper>
-            <h3>Hi! I'm Kyle!</h3>
+            <StyledSectionHeading text="Hi, I'm Kyle!" />
             <h4>I'm a Software Engineer located in St. Paul, MN</h4>
             <p>
               I've always enjoyed solving problems and building things. In
@@ -48,7 +48,7 @@ const Inner = styled.div`
   flex-direction: column;
 
   border-radius: var(--radius-subtle);
-  background-color: var(--color-primary-700);
+  /* background-color: var(--color-primary-700); */
 
   p {
     font-family: "Roboto", "sans-serif";

@@ -13,12 +13,17 @@ import { About } from "./components/about";
 
 import { useState } from "react";
 import { Contact, Services } from "./components/contact";
+import styled from "styled-components";
+
+// So that the rest of the page will scroll over the hero image
+const ZWrapper = styled.div`
+  position: relative;
+  z-index: 2;
+`;
 
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
-  const [background, setBackground] = useState(
-    "/img/software-process-darker.jpg"
-  );
+  const [background, setBackground] = useState("/img/space.png");
 
   const toggleSidebar = () => {
     setShowSidebar((prevState) => !prevState);
@@ -41,11 +46,13 @@ function App() {
       <PageWrapper>
         <MobileHeader toggleSidebar={toggleSidebar}></MobileHeader>
         <Hero url={background}></Hero>
-        <About></About>
-        <MySkills />
-        <ProjectGrid> </ProjectGrid>
-        <Contact></Contact>
-        <Footer></Footer>
+        <ZWrapper>
+          <About></About>
+          <MySkills />
+          <ProjectGrid> </ProjectGrid>
+          <Contact></Contact>
+          <Footer></Footer>
+        </ZWrapper>
       </PageWrapper>
     </>
   );

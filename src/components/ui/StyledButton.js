@@ -9,7 +9,7 @@ const StyledButton = styled.a`
   font-size: var(--fz-sm);
   font-family: "Lora", serif;
   letter-spacing: 1px;
-  border-radius: var(--radius-subtle);
+  border-radius: 2px;
   border: 1px solid var(--color-primary-300);
   padding: var(--spacing-sm) var(--spacing-xl);
   width: ${(p) => (p.width ? p.width : "100%")};
