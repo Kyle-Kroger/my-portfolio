@@ -7,7 +7,7 @@ import Project from "./Project";
 
 const ProjectGrid = (props) => {
   return (
-    <StyledSection color="var(--color-primary-900)">
+    <StyledSection color="linear-gradient(0deg, rgb(5, 5, 5), rgba(3, 3, 11, 0.1), rgba(7, 6, 19, 0.1), rgba(10, 9, 25, 0.1), rgba(13, 12, 31, 0.1), rgba(14, 14, 36, 0.1), rgba(14, 17, 42, 0.1), rgba(13, 19, 48, 0)), url('/img/space-two.png')">
       <StyledSectionHeading text={"Portfolio"} />
       <GridWrapper>
         <StyledProject

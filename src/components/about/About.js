@@ -6,11 +6,11 @@ import StyledSectionHeading from "../ui/StyledSectionHeading";
 
 const About = (props) => {
   return (
-    <StyledSection color="var(--color-primary-900)">
+    <ImageSection color="linear-gradient(0deg, rgba(3, 3, 5, 1) 1%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url('/img/space-three.png')">
       <Inner>
         <FlexWrapper>
           <StyledSectionWrapper>
-            <StyledSectionHeading text="Hi, I'm Kyle!" />
+            <StyledSectionHeading text="More About Me" />
             <h4>I'm a Software Engineer located in St. Paul, MN</h4>
             <p>
               I've always enjoyed solving problems and building things. In
@@ -38,14 +38,20 @@ const About = (props) => {
           </PhotoCardWrapper>
         </FlexWrapper>
       </Inner>
-    </StyledSection>
+    </ImageSection>
   );
 };
+
+const ImageSection = styled(StyledSection)`
+  background-size: stretch;
+  background-position: 30% 35%;
+`;
 
 const Inner = styled.div`
   ${helpers.maxWidthWrapper}
   display: flex;
   flex-direction: column;
+  padding-top: 3rem;
 
   border-radius: var(--radius-subtle);
   /* background-color: var(--color-primary-700); */
