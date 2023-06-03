@@ -48,6 +48,7 @@ const variables = css`
     --color-grey-900: hsl(240, 10%, 8%);
 
     --color-text-highlight: #ffd780;
+    --color-text-error: #e44e4e;
 
     --sidebar-color: hsl(230, 7%, 5%);
     --sidebar-text-color: hsl(0, 0%, 84%);
@@ -116,7 +117,19 @@ const variables = css`
       30.4px 26.6px 55.1px -0.8px hsl(var(--shadow-color-dark) / 0.37),
       42.9px 37.6px 77.9px -0.9px hsl(var(--shadow-color-dark) / 0.41);
 
-    /* Images */
+    /* Images/Backgrounds */
+    --project-background: linear-gradient(
+        0deg,
+        rgb(5, 5, 5),
+        rgba(3, 3, 11, 0.1),
+        rgba(7, 6, 19, 0.1),
+        rgba(10, 9, 25, 0.1),
+        rgba(13, 12, 31, 0.1),
+        rgba(14, 14, 36, 0.1),
+        rgba(14, 17, 42, 0.1),
+        rgba(13, 19, 48, 0)
+      ),
+      url("/img/space-two.png");
 
     /* Sizing */
     --sidebar-width: 200px;

@@ -13,6 +13,7 @@ const StyledButton = styled.a`
   border: 1px solid var(--color-primary-300);
   padding: var(--spacing-sm) var(--spacing-xl);
   width: ${(p) => (p.width ? p.width : "100%")};
+  cursor: pointer;
 
   transition: all 200ms ease-in-out;
 

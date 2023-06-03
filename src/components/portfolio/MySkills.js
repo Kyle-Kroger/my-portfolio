@@ -9,7 +9,6 @@ const Inner = styled.div`
   flex-direction: column;
 
   padding: var(--spacing-md) var(--spacing-lg);
-  border-radius: var(--radius-subtle);
   background-color: var(--color-primary-900T);
 
   p {
@@ -35,14 +34,13 @@ const SkillWrapper = styled.div`
 const MySkills = (props) => {
   return (
     <StyledSection color="url('/img/space-two.png')">
+      <StyledSectionHeading text="Skills" />
       <Inner>
-        <StyledSectionHeading text="Skills" />
         <p>
-          Throughout my time learning I have picked up many different skills
-          both from my degree and self learning. Shout out to Josh Comeau's CSS
-          for JS delveloper's course for being one of the most enjoyable and
-          informational courses I have taken! Currently I am working on my
-          Next.js, Prisma, and SQL skills by building a D&D spellbook app.
+          Throughout my time learning I've picked up many skills both from my
+          degree and self learning. Currently I am working on my Next.js,
+          TypeScript, Prisma, and SQL skills by building a D&D initative-tracker
+          app in my free time.
         </p>
         <SkillWrapper>
           <Skill name={"html5"} />

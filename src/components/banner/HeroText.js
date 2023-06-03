@@ -17,9 +17,8 @@ const HeroText = ({ className, children }) => {
       <h1>{HEADER_TEXT[0]}</h1>
       <h2>-- Fullstack Software Engineer --</h2>
       <p>
-        I specialize in building and occasionally designing fullstack web
-        applications. If you're interested in building something together click
-        the button to learn more!
+        I specialize in building and designing fullstack web applications. If
+        you're interested in building something together click the button below!
       </p>
       <StyledButton href="#v" width="fit-content">
         Let's Connect!
@@ -51,7 +50,7 @@ const StyledWrapper = styled.section`
   p {
     font-family: "lora", serif;
     margin: 3rem 0 4rem;
-    font-size: var(--fz-lg);
+    font-size: var(--fz-xl);
     color: var(--color-grey-100);
   }
 
