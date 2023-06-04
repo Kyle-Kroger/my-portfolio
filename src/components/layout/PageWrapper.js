@@ -12,6 +12,7 @@ const PageWrapper = (props) => {
 
 const FlexWrapper = styled.div`
   display: flex;
+  font-size: var(--fz-lg);
 `;
 
 const SidebarFiller = styled.div`

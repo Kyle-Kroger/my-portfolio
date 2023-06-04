@@ -68,7 +68,6 @@ const StyledSectionWrapper = styled.section`
   flex: 1;
 
   p {
-    font-size: var(--fz-lg);
     color: var(--color-grey-200);
   }
 

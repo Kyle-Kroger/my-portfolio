@@ -1,13 +1,19 @@
 import { createGlobalStyle } from "styled-components/macro";
-import fonts from "./fonts";
 import reset from "./reset";
 import variables from "./variables.globals";
+import { QUERIES } from "../constants";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
   //Fonts have moved to a app.css to prevent flickers
-  //${fonts}
   ${variables}
+
+  :root {
+    @media ${QUERIES.phone} {
+      --fz-lg: 1.125rem;
+      --fz-xl: 1.25rem;
+    }
+  }
 
   html {
     *,

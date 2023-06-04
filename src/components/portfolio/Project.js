@@ -155,7 +155,6 @@ const DescriptionBox = styled.div`
   margin: 0 auto;
   margin-top: var(--spacing-md);
   color: var(--color-grey-100);
-  font-size: var(--fz-md);
   border-top: 3px solid var(--color-primary-500);
   /* background-color: var(--color-primary-600); */
 
