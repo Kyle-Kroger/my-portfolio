@@ -4,7 +4,17 @@ import { helpers } from "../../styles";
 import { QUERIES } from "../../constants";
 
 const Project = (props) => {
-  const { title, imgDes, className, featured } = props;
+  const {
+    title,
+    desc,
+    techStack,
+    imgSrc,
+    imgDes,
+    link,
+    gitLink,
+    className,
+    featured,
+  } = props;
   return (
     <StyledWrapper className={className} featured={featured}>
       <Title featured={featured}>
@@ -12,12 +22,9 @@ const Project = (props) => {
           {featured && <h4>-- Featured Project --</h4>}
           <h3>{title}</h3>
           <ul>
-            <li>React</li>
-            <li>Styled Components</li>
-            <li>HTML</li>
-            <li>React</li>
-            <li>Styled Components</li>
-            <li>HTML</li>
+            {techStack.map((tech) => (
+              <li>{tech}</li>
+            ))}
           </ul>
         </div>
       </Title>
@@ -30,12 +37,7 @@ const Project = (props) => {
       </PhotoCardWrapper>
       <DescriptionBox>
         <div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-            praesentium id autem odio? Maxime deleniti inventore distinctio
-            esse, voluptatibus, dignissimos possimus vero, molestias quos sed a
-            earum in! Laborum, facere.
-          </p>
+          <p>{desc}</p>
         </div>
         <StyledButton href="#v" width="fit-content">
           Learn More
@@ -155,7 +157,6 @@ const DescriptionBox = styled.div`
   margin: 0 auto;
   margin-top: var(--spacing-md);
   color: var(--color-grey-100);
-  font-size: var(--fz-md);
   border-top: 3px solid var(--color-primary-500);
   /* background-color: var(--color-primary-600); */
 

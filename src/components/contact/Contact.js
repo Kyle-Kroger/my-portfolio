@@ -9,7 +9,6 @@ const Inner = styled.div`
   flex-direction: column;
   padding: var(--spacing-md) var(--spacing-lg);
   color: var(--color-grey-100);
-  font-size: var(--fz-md);
 
   p {
     font-family: "Roboto", "sans-serif";
@@ -20,7 +19,7 @@ const Inner = styled.div`
 const Contact = (props) => {
   return (
     <StyledSection color="linear-gradient(0deg, #0d1330, #0e112a, #0e0e24, #0d0c1f, #0a0919, #070613, #03030b, #050505)">
-      <StyledSectionHeading text="Contact" />
+      <StyledSectionHeading text="Contact" sectionId="contact" />
       <Inner>
         <p>
           I'm always looking for new opportunities! Feel free to send me a
