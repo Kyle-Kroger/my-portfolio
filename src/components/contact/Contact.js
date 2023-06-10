@@ -1,7 +1,9 @@
+import { useState } from "react";
 import styled from "styled-components/macro";
 import { StyledSection, StyledSectionHeading } from "../ui";
 import { helpers } from "../../styles";
 import ContactForm from "./ContactForm";
+import ContactConfirm from "./ContactConfirm";
 
 const Inner = styled.div`
   ${helpers.maxWidthWrapper}
@@ -17,6 +19,8 @@ const Inner = styled.div`
 `;
 
 const Contact = (props) => {
+  const [showForm, setShowForm] = useState(true);
+
   return (
     <StyledSection color="linear-gradient(0deg, #0d1330, #0e112a, #0e0e24, #0d0c1f, #0a0919, #070613, #03030b, #050505)">
       <StyledSectionHeading text="Contact" sectionId="contact" />
@@ -32,7 +36,12 @@ const Contact = (props) => {
           the one of your dreams! Send me a message with your ideas and I'll
           respond back within 48 hours so we can set up a time to talk.
         </p>
-        <ContactForm />
+        <p>
+          If you prefer to send me a direct email, my email address is
+          kyle.s.kroger@gmail.com. I look forward to hearing from you!
+        </p>
+        {showForm && <ContactForm setShowForm={setShowForm} />}
+        {!showForm && <ContactConfirm />}
       </Inner>
     </StyledSection>
   );

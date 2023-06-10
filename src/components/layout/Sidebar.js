@@ -61,9 +61,9 @@ const Sidebar = (props) => {
           </a>
         </ul>
       </StyledNav>
-      <ThemeButton onClick={changeTheme} disabled={disabled} icon={themeIcon}>
+      {/* <ThemeButton onClick={changeTheme} disabled={disabled} icon={themeIcon}>
         <ThemeIcon icon={themeIcon}></ThemeIcon>
-      </ThemeButton>
+      </ThemeButton> */}
       <NavFooterWrapper>
         <NavFooter></NavFooter>
       </NavFooterWrapper>
