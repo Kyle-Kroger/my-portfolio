@@ -14,7 +14,7 @@ const NavFooter = (props) => {
       <StyledIcon icon={faTwitter} />
       <StyledIcon icon={faGit} />
       <StyledIcon icon={faLinkedin} />
-      <a href="#contact">
+      <a href="mailto: kyle.s.kroger@gmail.com">
         <StyledIcon icon={faEnvelope} />
       </a>
     </Wrapper>
