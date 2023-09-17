@@ -14,7 +14,6 @@ const Inner = styled.div`
   p {
     font-family: "Roboto", "sans-serif";
     font-size: var(--fz-lg);
-    color: var(--color-grey-200);
   }
 `;
 
@@ -26,8 +25,6 @@ const SkillWrapper = styled.div`
   gap: var(--spacing-sm);
   padding: var(--spacing-md) 4px;
   margin: var(--spacing-md) 0;
-  /* border: 1px solid var(--color-primary-700); */
-  /* background-color: var(--color-primary-700); */
   border-radius: var(--radius-small);
 `;
 
