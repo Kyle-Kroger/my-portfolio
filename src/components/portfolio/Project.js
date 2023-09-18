@@ -30,9 +30,7 @@ const Project = (props) => {
       </Title>
       <PhotoCardWrapper featured={featured}>
         <StyledPhotoCard>
-          <a href="#v">
-            <img src="http://placekitten.com/800/450" alt={imgDes} />
-          </a>
+          <img src="http://placekitten.com/800/450" alt={imgDes} />
         </StyledPhotoCard>
       </PhotoCardWrapper>
       <DescriptionBox>
@@ -50,7 +48,6 @@ const Project = (props) => {
 const StyledWrapper = styled.section`
   display: flex;
   flex-direction: column;
-  //padding: var(--spacing-lg) var(--spacing-sm);
   padding-bottom: 0;
   border-radius: var(--radius-subtle);
   background-color: var(--color-primary-900T);
@@ -158,7 +155,6 @@ const DescriptionBox = styled.div`
   margin-top: var(--spacing-md);
   color: var(--color-grey-100);
   border-top: 3px solid var(--color-primary-500);
-  /* background-color: var(--color-primary-600); */
 
   p {
     padding: var(--spacing-md) 0;
