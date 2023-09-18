@@ -107,7 +107,7 @@ const Wrapper = styled.div`
   gap: 6px;
   padding: 2px var(--spacing-sm);
   border-radius: var(--radius-subtle);
-  h5 {
+  p {
     padding-top: 6px;
   }
 `;
@@ -121,12 +121,12 @@ const IconWrapper = styled.div`
 
 const Skill = ({ name }) => {
   if (!ICONS[name.toLowerCase()]) {
-    return <h5>Icon Not Found</h5>;
+    return <p>Icon Not Found</p>;
   }
   return (
     <Wrapper>
       <IconWrapper>{ICONS[name.toLowerCase()].icon()}</IconWrapper>
-      <h5>{ICONS[name.toLowerCase()].name}</h5>
+      <p>{ICONS[name.toLowerCase()].name}</p>
     </Wrapper>
   );
 };

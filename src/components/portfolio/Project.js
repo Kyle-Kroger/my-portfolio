@@ -19,7 +19,7 @@ const Project = (props) => {
     <StyledWrapper className={className} featured={featured}>
       <Title featured={featured}>
         <div>
-          {featured && <h4>-- Featured Project --</h4>}
+          {featured && <p>-- Featured Project --</p>}
           <h3>{title}</h3>
           <ul>
             {techStack.map((tech) => (
@@ -103,8 +103,9 @@ const Title = styled.section`
     padding-bottom: var(--spacing-sm);
   }
 
-  h4 {
+  p {
     color: var(--color-text-highlight);
+    font-size: clamp(1rem, 2vw + 1rem, 1.4rem);
   }
 
   ul {
@@ -117,7 +118,6 @@ const Title = styled.section`
   li {
     font-family: "Roboto", "sans-serif";
     color: var(--color-grey-200);
-    font-weight: 700;
     margin-bottom: var(--spacing-xs);
   }
 `;

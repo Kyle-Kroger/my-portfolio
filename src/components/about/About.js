@@ -11,7 +11,7 @@ const About = (props) => {
         <FlexWrapper>
           <StyledSectionWrapper>
             <StyledSectionHeading text="More About Me" sectionId="about" />
-            <h4>Hi! I'm a Software Engineer located in St. Paul, MN</h4>
+            <p>Hi! I'm a Software Engineer located in St. Paul, MN</p>
             <p>
               Every since I was little I have always enjoyed building things and
               solving problems. Building applications that focus on
@@ -63,6 +63,11 @@ const FlexWrapper = styled.div`
 
 const StyledSectionWrapper = styled.section`
   flex: 1;
+
+  p:first-of-type {
+    font-size: var(--fz-xl);
+    color: white;
+  }
 
   p {
     color: var(--color-grey-200);
