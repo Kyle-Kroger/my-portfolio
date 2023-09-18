@@ -35,30 +35,33 @@ const Sidebar = (props) => {
     <SidebarWrapper showSidebar={props.showSidebar}>
       <StyledNav>
         <ul>
-          <a href="#top">
-            <li>
+          <li>
+            <a href="#top">
               <StyledIcon icon={faHome}></StyledIcon>
               Home
-            </li>
-          </a>
-          <a href="#about">
-            <li>
+            </a>
+          </li>
+
+          <li>
+            <a href="#about">
               <StyledIcon icon={faUser}></StyledIcon>
               About
-            </li>
-          </a>
-          <a href="#portfolio">
-            <li>
+            </a>
+          </li>
+
+          <li>
+            <a href="#portfolio">
               <StyledIcon icon={faImagePortrait}></StyledIcon>
               Portfolio
-            </li>
-          </a>
-          <a href="#contact">
-            <li>
+            </a>
+          </li>
+
+          <li>
+            <a href="#contact">
               <StyledIcon icon={faEnvelope}></StyledIcon>
               Contact
-            </li>
-          </a>
+            </a>
+          </li>
         </ul>
       </StyledNav>
       {/* <ThemeButton onClick={changeTheme} disabled={disabled} icon={themeIcon}>
@@ -99,11 +102,6 @@ const StyledNav = styled.nav`
   width: 100%;
   /* Hidding overflow for the growing hover list items */
   overflow: hidden;
-
-  a {
-    display: block;
-    width: 100%;
-  }
 
   ul {
     display: flex;
