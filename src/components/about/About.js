@@ -31,9 +31,7 @@ const About = (props) => {
           </StyledSectionWrapper>
           <PhotoCardWrapper>
             <StyledPhotoCard height="revert">
-              <a href="#v">
-                <img src="http://placekitten.com/400/550" alt="Kyle" />
-              </a>
+              <img src="http://placekitten.com/400/550" alt="Kyle" />
             </StyledPhotoCard>
           </PhotoCardWrapper>
         </FlexWrapper>
@@ -53,7 +51,6 @@ const Inner = styled.div`
   flex-direction: column;
 
   border-radius: var(--radius-subtle);
-  /* background-color: var(--color-primary-700); */
 
   p {
     font-family: "Roboto", "sans-serif";
