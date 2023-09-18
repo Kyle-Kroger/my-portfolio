@@ -46,6 +46,7 @@ const ProjectGrid = (props) => {
         {projects.map((project, i) => {
           return (
             <StyledProject
+              key={project.title}
               title={project.title}
               desc={project.desc}
               techStack={project.techStack}

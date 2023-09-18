@@ -23,7 +23,7 @@ const Project = (props) => {
           <h3>{title}</h3>
           <ul>
             {techStack.map((tech) => (
-              <li>{tech}</li>
+              <li key={tech}>{tech}</li>
             ))}
           </ul>
         </div>
