@@ -6,7 +6,7 @@ import StyledSectionHeading from "../ui/StyledSectionHeading";
 
 const About = (props) => {
   return (
-    <ImageSection color="linear-gradient(0deg, rgba(3, 3, 5, 1) 1%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url('/img/space-three.png')">
+    <ImageSection>
       <Inner>
         <FlexWrapper>
           <StyledSectionWrapper>
@@ -41,6 +41,13 @@ const About = (props) => {
 };
 
 const ImageSection = styled(StyledSection)`
+  background: linear-gradient(
+      0deg,
+      rgba(3, 3, 5, 1) 1%,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("/img/space-three.webp");
   background-size: stretch;
   background-position: 30% 35%;
 `;

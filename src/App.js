@@ -23,7 +23,7 @@ const ZWrapper = styled.div`
 
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
-  const [background, setBackground] = useState("/img/space.png");
+  const [background, setBackground] = useState("/img/space.webp");
 
   const toggleSidebar = () => {
     setShowSidebar((prevState) => !prevState);

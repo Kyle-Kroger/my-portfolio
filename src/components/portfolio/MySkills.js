@@ -30,7 +30,7 @@ const SkillWrapper = styled.div`
 
 const MySkills = (props) => {
   return (
-    <StyledSection color="url('/img/space-two.png')">
+    <StyledSection color="url('/img/space-two.webp')">
       <StyledSectionHeading text="Skills" />
       <Inner>
         <p>

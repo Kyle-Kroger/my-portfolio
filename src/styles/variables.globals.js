@@ -129,7 +129,7 @@ const variables = css`
         rgba(14, 17, 42, 0.1),
         rgba(13, 19, 48, 0)
       ),
-      url("/img/space-two.png");
+      url("/img/space-two.webp");
 
     /* Sizing */
     --sidebar-width: 200px;
