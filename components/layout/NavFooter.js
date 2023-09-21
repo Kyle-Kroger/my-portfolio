@@ -1,14 +1,10 @@
 //REMOVE font awesome for styled icons
-
+"use client";
 import styled from "styled-components";
+import { StyledIconBase } from "@styled-icons/styled-icon";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faTwitter,
-  faGit,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { Twitter, Git, Linkedin } from "@styled-icons/boxicons-logos";
+import { Envelope } from "@styled-icons/fa-solid";
 
 const NavFooter = (props) => {
   return (
@@ -19,7 +15,7 @@ const NavFooter = (props) => {
         rel="noreferrer"
         aria-label="Twitter link"
       >
-        <StyledIcon icon={faTwitter} />
+        <Twitter />
       </a>
 
       <a
@@ -28,7 +24,7 @@ const NavFooter = (props) => {
         rel="noreferrer"
         aria-label="Github link"
       >
-        <StyledIcon icon={faGit} />
+        <Git />
       </a>
       <a
         href="https://www.linkedin.com/in/kyle-kroger-5a70a4231/"
@@ -36,10 +32,10 @@ const NavFooter = (props) => {
         rel="noreferrer"
         aria-label="Linkedin link"
       >
-        <StyledIcon icon={faLinkedin} />
+        <Linkedin />
       </a>
       <a href="mailto: kyle.s.kroger@gmail.com" aria-label="Email link">
-        <StyledIcon icon={faEnvelope} />
+        <Envelope />
       </a>
     </Wrapper>
   );
@@ -61,14 +57,16 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
   }
-`;
 
-const StyledIcon = styled(FontAwesomeIcon)`
-  transition: color 150ms ease-in, transform 150ms ease-in;
+  ${StyledIconBase} {
+    transition: color 150ms ease-in, transform 150ms ease-in;
+    max-width: 28px;
+    max-height: 28px;
 
-  &:hover {
-    color: white;
-    transform: scale(1.2);
+    &:hover {
+      color: white;
+      transform: scale(1.2);
+    }
   }
 `;
 

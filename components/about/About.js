@@ -1,3 +1,5 @@
+"use client";
+
 import styled from "styled-components";
 import { QUERIES, helpers } from "../../styles";
 import { StyledPhotoCard, StyledSection, StyledSectionHeading } from "../ui";

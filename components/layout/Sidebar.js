@@ -1,23 +1,23 @@
 //REMOVE font awesome for styled icons
-
+"use client";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { StyledIconBase } from "@styled-icons/styled-icon";
 import {
-  faHome,
-  faEnvelope,
-  faUser,
-  faImagePortrait,
-  faMoon,
-  faSun,
-} from "@fortawesome/free-solid-svg-icons";
+  Home,
+  Envelope,
+  User,
+  ImagePortrait,
+  Moon,
+  Sun,
+} from "@styled-icons/fa-solid";
 
 import { NavFooter } from ".";
 import { QUERIES } from "../../styles";
 
 const Sidebar = (props) => {
   const { toggleBackground } = props;
-  const [themeIcon, setThemeIcon] = useState(faMoon);
+  const [themeIcon, setThemeIcon] = useState(Moon);
   const [disabled, setDisabled] = useState(false);
 
   useEffect(() => {
@@ -28,10 +28,10 @@ const Sidebar = (props) => {
     return () => clearTimeout(timer);
   }, [themeIcon]);
 
-  const changeTheme = () => {
-    toggleBackground();
-    setThemeIcon((prevIcon) => (prevIcon === faMoon ? faSun : faMoon));
-  };
+  // const changeTheme = () => {
+  //   toggleBackground();
+  //   setThemeIcon((prevIcon) => (prevIcon === faMoon ? faSun : faMoon));
+  // };
 
   return (
     <SidebarWrapper showSidebar={props.showSidebar}>
@@ -39,28 +39,28 @@ const Sidebar = (props) => {
         <ul>
           <li>
             <a href="#top">
-              <StyledIcon icon={faHome}></StyledIcon>
+              <Home />
               Home
             </a>
           </li>
 
           <li>
             <a href="#about">
-              <StyledIcon icon={faUser}></StyledIcon>
+              <User />
               About
             </a>
           </li>
 
           <li>
             <a href="#portfolio">
-              <StyledIcon icon={faImagePortrait}></StyledIcon>
+              <ImagePortrait />
               Portfolio
             </a>
           </li>
 
           <li>
             <a href="#contact">
-              <StyledIcon icon={faEnvelope}></StyledIcon>
+              <Envelope />
               Contact
             </a>
           </li>
@@ -125,45 +125,46 @@ const StyledNav = styled.nav`
     color: white;
     transform: scale(1.1);
   }
-`;
 
-const StyledIcon = styled(FontAwesomeIcon)`
-  padding-right: 8px;
-  color: var(--color-primary-100);
-`;
-
-const ThemeIcon = styled(FontAwesomeIcon)`
-  font-size: 26px;
-  //moving one whole pixel
-  transform: ${(p) =>
-    p.icon === faMoon ? "translate(2px, 2px)" : "translate(0px, 2px)"};
-  border-radius: 40%;
-  //transform: translate(2px, 2px);
-  transition: color 200ms ease-out;
-`;
-
-const ThemeButton = styled.a`
-  position: absolute;
-  bottom: 80px;
-  margin-top: var(--spacing-lg);
-  padding: var(--spacing-sm);
-  background-color: ${(p) =>
-    p.icon === faMoon ? "var(--color-primary-700)" : "#b16f05"};
-  border-radius: 40%;
-  transition: background-color 600ms ease-out;
-  cursor: pointer;
-
-  pointer-events: ${(p) => (p.disabled ? "none" : "auto")};
-
-  &:hover {
-    background-color: var(--color-primary-500);
-    transition: background-color 200ms ease-out;
-  }
-
-  &:hover ${ThemeIcon} {
-    color: white;
+  ${StyledIconBase} {
+    padding-right: 8px;
+    color: var(--color-primary-100);
+    width: 32px;
   }
 `;
+
+// const ThemeIcon = styled(FontAwesomeIcon)`
+//   font-size: 26px;
+//   //moving one whole pixel
+//   transform: ${(p) =>
+//     p.icon === faMoon ? "translate(2px, 2px)" : "translate(0px, 2px)"};
+//   border-radius: 40%;
+//   //transform: translate(2px, 2px);
+//   transition: color 200ms ease-out;
+// `;
+
+// const ThemeButton = styled.a`
+//   position: absolute;
+//   bottom: 80px;
+//   margin-top: var(--spacing-lg);
+//   padding: var(--spacing-sm);
+//   background-color: ${(p) =>
+//     p.icon === faMoon ? "var(--color-primary-700)" : "#b16f05"};
+//   border-radius: 40%;
+//   transition: background-color 600ms ease-out;
+//   cursor: pointer;
+
+//   pointer-events: ${(p) => (p.disabled ? "none" : "auto")};
+
+//   &:hover {
+//     background-color: var(--color-primary-500);
+//     transition: background-color 200ms ease-out;
+//   }
+
+//   &:hover ${ThemeIcon} {
+//     color: white;
+//   }
+// `;
 
 const NavFooterWrapper = styled.footer`
   position: absolute;

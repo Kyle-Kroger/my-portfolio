@@ -1,3 +1,5 @@
+"use client";
+
 import styled from "styled-components";
 import { helpers } from "../../styles";
 import { StyledSection, StyledSectionHeading } from "../ui";

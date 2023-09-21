@@ -1,3 +1,5 @@
+"use client";
+
 import styled from "styled-components";
 import { ReactLogo, Html5, Css3 } from "@styled-icons/fa-brands";
 import { Javascript, TailwindCss, Git } from "@styled-icons/boxicons-logos";

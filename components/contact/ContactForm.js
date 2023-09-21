@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useRef } from "react";
 import styled from "styled-components";
 import { StyledButton } from "../ui";

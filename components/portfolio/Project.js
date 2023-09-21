@@ -1,3 +1,5 @@
+"use client";
+
 import styled, { css } from "styled-components";
 import { StyledButton, StyledPhotoCard } from "../ui";
 import { helpers, QUERIES } from "../../styles";

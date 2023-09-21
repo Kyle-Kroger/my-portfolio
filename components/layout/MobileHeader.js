@@ -1,8 +1,7 @@
 //REMOVE font awesome for styled icons
-
+"use client";
 import styled from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { Bars } from "@styled-icons/fa-solid";
 import { QUERIES } from "../../styles";
 
 const MobileHeader = (props) => {
@@ -10,7 +9,7 @@ const MobileHeader = (props) => {
 
   return (
     <StyledWrapper>
-      <StyledIcon onClick={toggleSidebar} icon={faBars}></StyledIcon>
+      <StyledBars onClick={toggleSidebar} />
     </StyledWrapper>
   );
 };
@@ -30,11 +29,13 @@ const StyledWrapper = styled.header`
   }
 `;
 
-const StyledIcon = styled(FontAwesomeIcon)`
+const StyledBars = styled(Bars)`
   position: absolute;
   padding: 6px 16px;
   right: 0px;
   top: 0px;
+
+  width: 66px;
 
   font-size: 2.5rem;
   color: var(--color-primary-100);
