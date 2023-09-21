@@ -1,6 +1,5 @@
-import styled from "styled-components/macro";
-import { QUERIES } from "../../constants";
-import { helpers } from "../../styles";
+import styled from "styled-components";
+import { helpers, QUERIES } from "../../styles";
 import { StyledButton, StyledPhotoCard } from "../ui";
 
 const FeaturedProject = (props) => {

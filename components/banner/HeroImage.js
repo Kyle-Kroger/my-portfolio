@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import { css } from "styled-components";
-import { keyframes } from "styled-components";
-import styled from "styled-components/macro";
+import styled, { css, keyframes } from "styled-components";
 import { useFirstRender } from "../../Hooks";
 
 const HeroImage = (props) => {

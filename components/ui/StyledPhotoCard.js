@@ -1,4 +1,4 @@
-import styled from "styled-components/macro";
+import styled from "styled-components";
 import { helpers } from "../../styles";
 
 const StyledPhotoCard = styled.figure`

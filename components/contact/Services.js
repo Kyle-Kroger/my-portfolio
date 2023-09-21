@@ -1,13 +1,13 @@
-import styled from 'styled-components/macro';
+import styled from "styled-components";
 
 const Services = (props) => {
-  return ( <StyledWrapper></StyledWrapper>);
-}
+  return <StyledWrapper></StyledWrapper>;
+};
 
 const StyledWrapper = styled.section`
   width: 100%;
   background-color: var(--color-primary-A800);
   min-height: 80vh;
 `;
- 
+
 export default Services;

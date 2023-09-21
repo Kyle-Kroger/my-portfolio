@@ -1,4 +1,7 @@
-import styled from "styled-components/macro";
+//REMOVE font awesome for styled icons
+
+import { useEffect, useState } from "react";
+import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
@@ -10,8 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import { NavFooter } from ".";
-import { QUERIES } from "../../constants";
-import { useEffect, useState } from "react";
+import { QUERIES } from "../../styles";
 
 const Sidebar = (props) => {
   const { toggleBackground } = props;

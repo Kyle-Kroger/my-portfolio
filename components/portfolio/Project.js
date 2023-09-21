@@ -1,7 +1,6 @@
-import styled, { css } from "styled-components/macro";
+import styled, { css } from "styled-components";
 import { StyledButton, StyledPhotoCard } from "../ui";
-import { helpers } from "../../styles";
-import { QUERIES } from "../../constants";
+import { helpers, QUERIES } from "../../styles";
 
 const Project = (props) => {
   const {

@@ -1,8 +1,6 @@
-import styled from "styled-components/macro";
-import { QUERIES } from "../../constants";
-import { helpers } from "../../styles";
-import { StyledPhotoCard, StyledSection } from "../ui";
-import StyledSectionHeading from "../ui/StyledSectionHeading";
+import styled from "styled-components";
+import { QUERIES, helpers } from "../../styles";
+import { StyledPhotoCard, StyledSection, StyledSectionHeading } from "../ui";
 
 const About = (props) => {
   return (

@@ -1,14 +1,18 @@
-import styled from "styled-components/macro";
+//REMOVE font awesome for styled icons
+
+import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { QUERIES } from "../../constants";
+import { QUERIES } from "../../styles";
 
 const MobileHeader = (props) => {
-  const {toggleSidebar} = props;
+  const { toggleSidebar } = props;
 
-  return <StyledWrapper>
-    <StyledIcon onClick={toggleSidebar} icon={faBars}></StyledIcon>
-  </StyledWrapper>;
+  return (
+    <StyledWrapper>
+      <StyledIcon onClick={toggleSidebar} icon={faBars}></StyledIcon>
+    </StyledWrapper>
+  );
 };
 
 const StyledWrapper = styled.header`
@@ -32,9 +36,9 @@ const StyledIcon = styled(FontAwesomeIcon)`
   right: 0px;
   top: 0px;
 
-  font-size: 2.5rem; 
+  font-size: 2.5rem;
   color: var(--color-primary-100);
-  
+
   transition: color 300ms ease-out;
 
   &:hover {

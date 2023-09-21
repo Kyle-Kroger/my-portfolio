@@ -1,5 +1,5 @@
-import styled from "styled-components/macro";
-import { QUERIES } from "../../constants";
+import styled from "styled-components";
+import { QUERIES } from "../../styles";
 
 const StyledSection = styled.section`
   padding: var(--spacing-xxl) var(--spacing-md);

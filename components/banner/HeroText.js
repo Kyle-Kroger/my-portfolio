@@ -1,7 +1,6 @@
-import styled from "styled-components/macro";
-import { animations, helpers } from "../../styles";
+import styled from "styled-components";
+import { animations, helpers, QUERIES } from "../../styles";
 import { StyledButton, StyledPhotoCard } from "../ui";
-import { QUERIES } from "../../constants";
 
 const HEADER_TEXT = [
   "Hi, I'm Kyle Kroger",
