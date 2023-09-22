@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import { helpers } from "../../styles";
+import { helpers, QUERIES } from "../../styles";
 
 const StyledSectionHeading = (props) => {
   const { text, sectionId } = props;
@@ -19,9 +19,11 @@ const StyledWrapper = styled.div`
   justify-content: left;
   flex-direction: column;
   text-transform: capitalize;
-  font-family: "Barlow", "serif";
-  font-weight: 700;
-  padding: 0 var(--spacing-lg);
+  font-family: "Lora", "serif";
+
+  @media ${QUERIES.tabetAndDown} {
+    padding: 0 var(--spacing-lg);
+  }
 `;
 
 const Divider = styled.div`

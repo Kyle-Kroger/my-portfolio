@@ -126,7 +126,7 @@ const Title = styled.section`
 const PhotoCardWrapper = styled.section`
   padding: var(--spacing-md);
   margin: 0 auto;
-  max-width: 550px;
+  max-width: 700px;
 
   ${(p) =>
     p.featured &&

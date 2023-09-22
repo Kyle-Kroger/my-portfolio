@@ -81,6 +81,7 @@ const GridWrapper = styled.section`
 const StyledProject = styled(Project)`
   @media ${QUERIES.tabetAndDown} {
     grid-column: 1/-1;
+    margin: 0 auto;
   }
 
   &.featured {

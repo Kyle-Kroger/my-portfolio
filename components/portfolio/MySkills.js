@@ -11,7 +11,6 @@ const Inner = styled.div`
   flex-direction: column;
 
   padding: var(--spacing-md) var(--spacing-lg);
-  background-color: var(--color-primary-900T);
 
   p {
     font-family: "Roboto", "sans-serif";
@@ -36,8 +35,8 @@ const MySkills = (props) => {
       <StyledSectionHeading text="Skills" />
       <Inner>
         <p>
-          Throughout my time learning I've picked up many skills both from my
-          degree and self learning. Currently I am working on my Next.js,
+          While I have coded in quite a few other languges these are the skills
+          that I feel proficient with. Currently I am working on my Next.js,
           TypeScript, Prisma, and SQL skills by building a D&D initative-tracker
           app in my free time.
         </p>
