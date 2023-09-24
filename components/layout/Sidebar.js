@@ -127,9 +127,9 @@ const StyledNav = styled.nav`
   }
 
   ${StyledIconBase} {
-    padding-right: 8px;
+    padding-right: 12px;
     color: var(--color-primary-100);
-    width: 32px;
+    width: 36px;
   }
 `;
 
