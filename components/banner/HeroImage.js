@@ -4,8 +4,7 @@ import { useEffect, useState } from "react";
 import styled, { css, keyframes } from "styled-components";
 import { useFirstRender } from "../../Hooks";
 
-const HeroImage = (props) => {
-  const { children, url, height, className } = props;
+const HeroImage = ({ children, url, height, className }) => {
   const [newUrl, setNewUrl] = useState(url);
   const [animated, setAnimated] = useState(false);
   const firstRender = useFirstRender();
@@ -27,10 +26,9 @@ const HeroImage = (props) => {
     <>
       <HeroImgBackground
         className={className}
-        url={url}
-        newUrl={newUrl}
-        height={height}
-        animated={animated}
+        $url={url}
+        $newUrl={newUrl}
+        $animated={animated}
       >
         {children}
       </HeroImgBackground>
@@ -47,7 +45,7 @@ const changeBg = (url, newUrl) => keyframes`
 `;
 
 const HeroImgBackground = styled.div`
-  background-image: url(${(p) => p.newUrl});
+  background-image: url(${(p) => p.$newUrl});
   background-size: cover;
   background-attachment: fixed;
   background-position: bottom;
@@ -55,10 +53,10 @@ const HeroImgBackground = styled.div`
   height: 100%;
 
   ${(p) =>
-    p.animated &&
+    p.$animated &&
     css`
       pointer-events: none;
-      animation: ${changeBg(p.url, p.newUrl)} 2s ease-in-out 200ms;
+      animation: ${changeBg(p.$url, p.$newUrl)} 2s ease-in-out 200ms;
     `}
 `;
 

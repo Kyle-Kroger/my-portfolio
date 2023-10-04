@@ -17,8 +17,8 @@ const Project = (props) => {
     featured,
   } = props;
   return (
-    <StyledWrapper className={className} featured={featured}>
-      <Title featured={featured}>
+    <StyledWrapper className={className} $featured={featured}>
+      <Title $featured={featured}>
         <div>
           {featured && <p>-- Featured Project --</p>}
           <h3>{title}</h3>
@@ -29,7 +29,7 @@ const Project = (props) => {
           </ul>
         </div>
       </Title>
-      <PhotoCardWrapper featured={featured}>
+      <PhotoCardWrapper $featured={featured}>
         <StyledPhotoCard>
           <img src="http://placekitten.com/800/450" alt={imgDes} />
         </StyledPhotoCard>
@@ -54,7 +54,7 @@ const StyledWrapper = styled.section`
   background-color: var(--color-primary-900T);
 
   ${(p) =>
-    p.featured &&
+    p.$featured &&
     css`
       flex-direction: row;
       flex-wrap: wrap;
@@ -73,7 +73,7 @@ const Title = styled.section`
   padding-bottom: 0;
 
   ${(p) =>
-    p.featured &&
+    p.$featured &&
     css`
       flex: 1;
       padding: var(--spacing-lg);
@@ -129,7 +129,7 @@ const PhotoCardWrapper = styled.section`
   max-width: 700px;
 
   ${(p) =>
-    p.featured &&
+    p.$featured &&
     css`
       flex: 1.2;
       min-width: 40%;

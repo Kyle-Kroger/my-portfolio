@@ -15,8 +15,7 @@ import {
 import { NavFooter } from ".";
 import { QUERIES } from "../../styles";
 
-const Sidebar = (props) => {
-  const { toggleBackground } = props;
+const Sidebar = ({ showSidebar }) => {
   const [themeIcon, setThemeIcon] = useState(Moon);
   const [disabled, setDisabled] = useState(false);
 
@@ -34,7 +33,7 @@ const Sidebar = (props) => {
   // };
 
   return (
-    <SidebarWrapper showSidebar={props.showSidebar}>
+    <SidebarWrapper $showSidebar={showSidebar}>
       <StyledNav>
         <ul>
           <li>
@@ -92,10 +91,10 @@ const SidebarWrapper = styled.div`
   bottom: 0;
   z-index: 10000;
 
-  transition: left ${(p) => (p.showSidebar ? "500ms" : "200ms")} ease-in-out;
+  transition: left ${(p) => (p.$showSidebar ? "500ms" : "200ms")} ease-in-out;
 
   @media ${QUERIES.tabetAndDown} {
-    left: ${(p) => (p.showSidebar ? "0" : "calc(var(--sidebar-width) * -1)")};
+    left: ${(p) => (p.$showSidebar ? "0" : "calc(var(--sidebar-width) * -1)")};
   }
 `;
 
