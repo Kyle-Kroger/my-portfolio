@@ -50,8 +50,14 @@ const StyledWrapper = styled.section`
   display: flex;
   flex-direction: column;
   padding-bottom: 0;
-  border-radius: var(--radius-subtle);
-  background-color: var(--color-primary-900T);
+
+  /* From https://css.glass */
+  background: hsl(234 49% 24% / 0.26);
+  border-radius: var(--radius-small);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(31, 37, 92, 0.14);
 
   ${(p) =>
     p.$featured &&
@@ -61,7 +67,6 @@ const StyledWrapper = styled.section`
       padding: 0;
       width: 100%;
     `}
-
   @media ${QUERIES.tabetAndDown} {
     max-width: 850px;
     flex-direction: column;
