@@ -16,12 +16,11 @@ const HeroText = ({ className, children }) => {
   return (
     <StyledWrapper className={className}>
       <h1>{HEADER_TEXT[0]}</h1>
-      <h2>Web Developer</h2>
+      <h2>Software Developer</h2>
       <p>
-        I specialize in building and designing web applications that are
-        accessible with a great user experience. I always love talking with new
-        people and learning what they are working on, so feel free to shoot me a
-        message!
+        I specialize in building and designing applications that are accessible
+        with a great user experience. I always love talking with new people and
+        learning what they are working on, so feel free to shoot me a message!
       </p>
       <StyledButton href="#v" width="fit-content">
         Let's Connect!
