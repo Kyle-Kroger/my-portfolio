@@ -1,11 +1,16 @@
-//REMOVE font awesome for styled icons
 "use client";
+import { useRouter, useSearchParams } from "next/navigation";
 import styled from "styled-components";
 import { Bars } from "@styled-icons/fa-solid";
+import useNavStore from "../../stores/useNavStore";
 import { QUERIES } from "../../styles";
 
-const MobileHeader = (props) => {
-  const { toggleSidebar } = props;
+const MobileHeader = () => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const toggleSidebar = useNavStore((state) => state.toggleSidebar);
+
+  //const currentSidebar = searchParams.get("hideSidebar") === "true";
 
   return (
     <StyledWrapper>

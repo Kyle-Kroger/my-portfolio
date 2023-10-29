@@ -35,7 +35,7 @@ const MySkills = (props) => {
       <StyledSectionHeading text="Skills" />
       <Inner>
         <p>
-          While I have coded in quite a few other languges these are the skills
+          While I have coded in quite a few other languages these are the skills
           that I feel proficient with. Currently I am working on my Next.js,
           TypeScript, Prisma, and SQL skills by building a D&D initative-tracker
           app in my free time.
