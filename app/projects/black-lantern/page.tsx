@@ -21,7 +21,6 @@ export default function Home() {
 
   return (
     <>
-      <Sidebar showSidebar={showSidebar} />
       <PageWrapper></PageWrapper>
     </>
   );

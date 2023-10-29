@@ -52,11 +52,11 @@ const StyledWrapper = styled.section`
   padding-bottom: 0;
 
   /* From https://css.glass */
-  background: hsl(234 49% 24% / 0.26);
+  background: hsla(240, 24%, 11%, 0.2);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(31, 37, 92, 0.14);
+  border: 3px solid rgba(139, 139, 139, 0.14);
 
   ${(p) =>
     p.$featured &&
@@ -104,7 +104,7 @@ const Title = styled.section`
   h3 {
     width: 100%;
     color: white;
-    border-bottom: 3px solid var(--color-primary-700);
+    border-bottom: 3px solid rgba(139, 139, 139, 0.14);
     padding-bottom: var(--spacing-sm);
   }
 
@@ -159,7 +159,7 @@ const DescriptionBox = styled.div`
   margin: 0 auto;
   margin-top: var(--spacing-md);
   color: var(--color-grey-100);
-  border-top: 3px solid var(--color-primary-700);
+  border-top: 3px solid rgba(139, 139, 139, 0.14);
 
   p {
     padding: var(--spacing-md) 0;

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import StyledComponentsRegistry from "./lib/registry";
 import GlobalStyles from "../styles/GlobalStyle";
 import "./global.css";
+import { Sidebar, MobileHeader } from "@/components/layout";
 
 export const metadata: Metadata = {
   title: "Kyle's Portfolio",
@@ -18,6 +19,8 @@ export default function RootLayout({
       <body>
         <StyledComponentsRegistry>
           <GlobalStyles />
+          <Sidebar />
+          <MobileHeader />
           {children}
         </StyledComponentsRegistry>
       </body>

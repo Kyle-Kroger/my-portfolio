@@ -50,7 +50,6 @@ const StyledWrapper = styled.section`
   }
 
   p {
-    font-family: "lora", serif;
     margin: 3rem 0 4rem;
     font-size: var(--fz-xl);
     color: var(--color-grey-100);

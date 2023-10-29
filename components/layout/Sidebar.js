@@ -1,6 +1,5 @@
-//REMOVE font awesome for styled icons
 "use client";
-import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import styled from "styled-components";
 import { StyledIconBase } from "@styled-icons/styled-icon";
 import {
@@ -12,28 +11,18 @@ import {
   Sun,
 } from "@styled-icons/fa-solid";
 
+import useNavStore from "../../stores/useNavStore";
 import { NavFooter } from ".";
 import { QUERIES } from "../../styles";
 
-const Sidebar = ({ showSidebar }) => {
-  const [themeIcon, setThemeIcon] = useState(Moon);
-  const [disabled, setDisabled] = useState(false);
+const Sidebar = () => {
+  const searchParams = useSearchParams();
+  const hideSidebar = useNavStore((state) => state.hideSidebar);
 
-  useEffect(() => {
-    setDisabled(true);
-    const timer = setTimeout(() => {
-      setDisabled(false);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, [themeIcon]);
-
-  // const changeTheme = () => {
-  //   toggleBackground();
-  //   setThemeIcon((prevIcon) => (prevIcon === faMoon ? faSun : faMoon));
-  // };
+  //const hideSidebar = searchParams.get("hideSidebar");
 
   return (
-    <SidebarWrapper $showSidebar={showSidebar}>
+    <SidebarWrapper $hideSidebar={hideSidebar}>
       <StyledNav>
         <ul>
           <li>
@@ -65,9 +54,6 @@ const Sidebar = ({ showSidebar }) => {
           </li>
         </ul>
       </StyledNav>
-      {/* <ThemeButton onClick={changeTheme} disabled={disabled} icon={themeIcon}>
-        <ThemeIcon icon={themeIcon}></ThemeIcon>
-      </ThemeButton> */}
       <NavFooterWrapper>
         <NavFooter></NavFooter>
       </NavFooterWrapper>
@@ -94,7 +80,7 @@ const SidebarWrapper = styled.div`
   transition: left ${(p) => (p.$showSidebar ? "500ms" : "200ms")} ease-in-out;
 
   @media ${QUERIES.tabetAndDown} {
-    left: ${(p) => (p.$showSidebar ? "0" : "calc(var(--sidebar-width) * -1)")};
+    left: ${(p) => (p.$hideSidebar ? "calc(var(--sidebar-width) * -1)" : "0")};
   }
 `;
 
@@ -131,39 +117,6 @@ const StyledNav = styled.nav`
     width: 36px;
   }
 `;
-
-// const ThemeIcon = styled(FontAwesomeIcon)`
-//   font-size: 26px;
-//   //moving one whole pixel
-//   transform: ${(p) =>
-//     p.icon === faMoon ? "translate(2px, 2px)" : "translate(0px, 2px)"};
-//   border-radius: 40%;
-//   //transform: translate(2px, 2px);
-//   transition: color 200ms ease-out;
-// `;
-
-// const ThemeButton = styled.a`
-//   position: absolute;
-//   bottom: 80px;
-//   margin-top: var(--spacing-lg);
-//   padding: var(--spacing-sm);
-//   background-color: ${(p) =>
-//     p.icon === faMoon ? "var(--color-primary-700)" : "#b16f05"};
-//   border-radius: 40%;
-//   transition: background-color 600ms ease-out;
-//   cursor: pointer;
-
-//   pointer-events: ${(p) => (p.disabled ? "none" : "auto")};
-
-//   &:hover {
-//     background-color: var(--color-primary-500);
-//     transition: background-color 200ms ease-out;
-//   }
-
-//   &:hover ${ThemeIcon} {
-//     color: white;
-//   }
-// `;
 
 const NavFooterWrapper = styled.footer`
   position: absolute;
