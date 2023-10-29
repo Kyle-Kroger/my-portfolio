@@ -50,8 +50,13 @@ const StyledWrapper = styled.section`
   display: flex;
   flex-direction: column;
   padding-bottom: 0;
-  border-radius: var(--radius-subtle);
-  background-color: var(--color-primary-900T);
+
+  /* From https://css.glass */
+  background: hsl(234 49% 24% / 0.26);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(31, 37, 92, 0.14);
 
   ${(p) =>
     p.$featured &&
@@ -61,7 +66,6 @@ const StyledWrapper = styled.section`
       padding: 0;
       width: 100%;
     `}
-
   @media ${QUERIES.tabetAndDown} {
     max-width: 850px;
     flex-direction: column;
@@ -100,7 +104,7 @@ const Title = styled.section`
   h3 {
     width: 100%;
     color: white;
-    border-bottom: 3px solid var(--color-primary-500);
+    border-bottom: 3px solid var(--color-primary-700);
     padding-bottom: var(--spacing-sm);
   }
 
@@ -126,14 +130,14 @@ const Title = styled.section`
 const PhotoCardWrapper = styled.section`
   padding: var(--spacing-md);
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 500px;
 
   ${(p) =>
     p.$featured &&
     css`
-      flex: 1.2;
+      flex: 1.3;
       min-width: 40%;
-      max-width: 1000px;
+      max-width: 650px;
       padding: var(--spacing-lg);
       padding-left: 0;
       padding-bottom: 0;
@@ -155,7 +159,7 @@ const DescriptionBox = styled.div`
   margin: 0 auto;
   margin-top: var(--spacing-md);
   color: var(--color-grey-100);
-  border-top: 3px solid var(--color-primary-500);
+  border-top: 3px solid var(--color-primary-700);
 
   p {
     padding: var(--spacing-md) 0;
