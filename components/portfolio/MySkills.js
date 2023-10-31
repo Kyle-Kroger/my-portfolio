@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 import { helpers } from "../../styles";
-import { StyledSection, StyledSectionHeading } from "../ui";
+import { StyledSection, StyledSectionHeading, GlassWrapper } from "../ui";
 import Skill from "./Skill";
 
 const Inner = styled.div`
@@ -18,7 +18,7 @@ const Inner = styled.div`
   }
 `;
 
-const SkillWrapper = styled.div`
+const SkillWrapper = styled(GlassWrapper)`
   display: flex;
   flex-wrap: wrap;
   align-self: center;
@@ -26,7 +26,6 @@ const SkillWrapper = styled.div`
   gap: var(--spacing-sm);
   padding: var(--spacing-md) 4px;
   margin: var(--spacing-md) 0;
-  border-radius: var(--radius-small);
 `;
 
 const MySkills = (props) => {

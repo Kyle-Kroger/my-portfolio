@@ -1,21 +1,11 @@
-"use client";
-
 import styled from "styled-components";
-import { animations, helpers, QUERIES } from "../../styles";
-import { StyledButton, StyledPhotoCard } from "../ui";
-
-const HEADER_TEXT = [
-  "Hi, I'm Kyle Kroger",
-  "Looking to establish a web presence?",
-  "I would love to help you!",
-  "Shoot me an email for a consultation",
-  "Looking forward to talking with you!",
-];
+import { animations, QUERIES } from "../../styles";
+import { StyledButton } from "../ui";
 
 const HeroText = ({ className, children }) => {
   return (
     <StyledWrapper className={className}>
-      <h1>{HEADER_TEXT[0]}</h1>
+      <h1>Hi, I'm Kyle Kroger</h1>
       <h2>Software Developer</h2>
       <p>
         I specialize in building and designing applications that are accessible
@@ -39,7 +29,7 @@ const StyledWrapper = styled.section`
   font-family: "Barlow", sans-serif;
   padding: 3rem;
   border-radius: var(--radius-subtle);
-  opacity: 0;
+  opacity: 1;
   animation: ${animations.fadeIn} 2s ease-in-out 500ms;
   animation-fill-mode: forwards;
 
@@ -58,14 +48,6 @@ const StyledWrapper = styled.section`
   @media ${QUERIES.tabetAndDown} {
     padding: 3rem;
   }
-`;
-
-const Divider = styled.div`
-  width: 90%;
-  height: 2px;
-  background-color: var(--color-primary-200);
-  margin-top: 4px;
-  margin-bottom: var(--spacing-md);
 `;
 
 export default HeroText;

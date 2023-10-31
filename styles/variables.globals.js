@@ -50,6 +50,8 @@ const variables = css`
     --color-text-highlight: #ffd780;
     --color-text-error: #e44e4e;
 
+    --color-glass-border: hsla(0, 0%, 54%, 0.14);
+
     --sidebar-color: hsl(230, 7%, 5%);
     --sidebar-text-color: hsl(0, 0%, 84%);
     --side-bar-text-faded: hsl(230, 15%, 52%);

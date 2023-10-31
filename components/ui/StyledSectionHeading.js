@@ -29,7 +29,7 @@ const StyledWrapper = styled.div`
 const Divider = styled.div`
   width: 100%;
   height: 2px;
-  background-color: var(--color-primary-700);
+  background-color: var(--color-glass-border);
   margin-top: 4px;
   margin-bottom: var(--spacing-md);
 `;

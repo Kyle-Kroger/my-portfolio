@@ -1,7 +1,7 @@
 "use client";
 
 import styled, { css } from "styled-components";
-import { StyledButton, StyledPhotoCard } from "../ui";
+import { StyledButton, StyledPhotoCard, GlassWrapper } from "../ui";
 import { helpers, QUERIES } from "../../styles";
 
 const Project = (props) => {
@@ -17,7 +17,7 @@ const Project = (props) => {
     featured,
   } = props;
   return (
-    <StyledWrapper className={className} $featured={featured}>
+    <Wrapper className={className} $featured={featured}>
       <Title $featured={featured}>
         <div>
           {featured && <p>-- Featured Project --</p>}
@@ -42,21 +42,14 @@ const Project = (props) => {
           Learn More
         </StyledButton>
       </DescriptionBox>
-    </StyledWrapper>
+    </Wrapper>
   );
 };
 
-const StyledWrapper = styled.section`
+const Wrapper = styled(GlassWrapper)`
   display: flex;
   flex-direction: column;
   padding-bottom: 0;
-
-  /* From https://css.glass */
-  background: hsla(240, 24%, 11%, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 3px solid rgba(139, 139, 139, 0.14);
 
   ${(p) =>
     p.$featured &&
