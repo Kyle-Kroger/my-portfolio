@@ -29,9 +29,7 @@ const StyledWrapper = styled.section`
   font-family: "Barlow", sans-serif;
   padding: 3rem;
   border-radius: var(--radius-subtle);
-  opacity: 1;
-  animation: ${animations.fadeIn} 2s ease-in-out 500ms;
-  animation-fill-mode: forwards;
+  animation: ${animations.fadeIn} 2s ease-in-out;
 
   transition: all 400ms;
 

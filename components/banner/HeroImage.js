@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import styled, { css, keyframes } from "styled-components";
+import styled from "styled-components";
 import { useFirstRender } from "../../Hooks";
 
 const HeroImage = ({ children, url, height, className }) => {
@@ -37,13 +37,6 @@ const HeroImage = ({ children, url, height, className }) => {
   );
 };
 
-const changeBg = (url, newUrl) => keyframes`
-  0% {opacity: 1; background-image:url(${newUrl})}
-  50% {opacity: 0; background-image:url(${newUrl}) ;}
-  51% {background-image: url(${url});}
-  100% {opacity: 1; background-image: url(${url});}
-`;
-
 const HeroImgBackground = styled.div`
   background-image: url(${(p) => p.$newUrl});
   background-size: cover;
@@ -51,13 +44,6 @@ const HeroImgBackground = styled.div`
   background-position: bottom;
   width: 100%;
   height: 100%;
-
-  ${(p) =>
-    p.$animated &&
-    css`
-      pointer-events: none;
-      animation: ${changeBg(p.$url, p.$newUrl)} 2s ease-in-out 200ms;
-    `}
 `;
 
 const Overlay = styled.div`
