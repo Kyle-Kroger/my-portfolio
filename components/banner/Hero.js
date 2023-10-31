@@ -33,12 +33,4 @@ const Wrapper = styled.div`
   }
 `;
 
-const TextWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  padding: var(--spacing-lg) var(--spacing-md);
-`;
-
 export default Hero;

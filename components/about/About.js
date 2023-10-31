@@ -2,7 +2,12 @@
 
 import styled from "styled-components";
 import { QUERIES, helpers } from "../../styles";
-import { StyledPhotoCard, StyledSection, StyledSectionHeading } from "../ui";
+import {
+  StyledPhotoCard,
+  StyledSection,
+  StyledSectionHeading,
+  GlassWrapper,
+} from "../ui";
 
 const About = (props) => {
   return (
@@ -11,27 +16,30 @@ const About = (props) => {
         <FlexWrapper>
           <StyledSectionWrapper>
             <StyledSectionHeading text="More About Me" sectionId="about" />
-            <p>Hi! I'm a Software Developer located in St. Paul, MN</p>
-            <p>
-              Every since I was little I have always enjoyed building things and
-              solving problems. With coding I get to do that everyday!
-            </p>
-            <p>
-              I have an associate of applied science in software development
-              from DCTC and along with self study have learned many things. I
-              primarily work with JavaScript, in either React or Next.js, but
-              have also learned and built a few things in C# and Python. I've
-              also used a bit of PHP and first learned to code in Java. Being
-              able to constantly learn new things is one of my favorite parts of
-              programming.
-            </p>
-            <p>
-              When I'm not coding or learning I enjoy reading, playing video
-              games with friends, and creating worlds and stories for my d&d
-              campaigns. Feel free to contact me with any questions or even just
-              to say hello. I always enjoy hearing from new people and learning
-              what they are working on!
-            </p>
+            <GlassWrapper>
+              <h4>Hi! I'm a Software Developer located in St. Paul, MN</h4>
+
+              <p>
+                Every since I was little I have always enjoyed building things
+                and solving problems. With coding I get to do that everyday!
+              </p>
+              <p>
+                I have an associate of applied science in software development
+                from DCTC and along with self study have learned many things. I
+                primarily work with JavaScript, in either React or Next.js, but
+                have also learned and built a few things in C# and Python. I've
+                also used a bit of PHP and first learned to code in Java. Being
+                able to constantly learn new things is one of my favorite parts
+                of programming.
+              </p>
+              <p>
+                When I'm not coding or learning I enjoy reading, playing video
+                games with friends, and creating worlds and stories for my d&d
+                campaigns. Feel free to contact me with any questions or even
+                just to say hello. I always enjoy hearing from new people and
+                learning what they are working on!
+              </p>
+            </GlassWrapper>
           </StyledSectionWrapper>
           <PhotoCardWrapper>
             <StyledPhotoCard height="revert">
@@ -70,15 +78,15 @@ const Inner = styled.div`
 
 const FlexWrapper = styled.div`
   display: flex;
+  align-items: center;
+
+  @media ${QUERIES.laptopAndDown} {
+    flex-direction: column;
+  }
 `;
 
 const StyledSectionWrapper = styled.section`
   flex: 1;
-
-  p:first-of-type {
-    font-size: var(--fz-xl);
-    color: white;
-  }
 
   p {
     color: var(--color-grey-200);
