@@ -4,7 +4,7 @@ import { StyledButton } from "../ui";
 
 const HeroText = ({ className, children }) => {
   return (
-    <StyledWrapper className={className}>
+    <Wrapper className={className}>
       <h1>Hi, I'm Kyle Kroger</h1>
       <h2>Software Developer</h2>
       <p>
@@ -15,11 +15,11 @@ const HeroText = ({ className, children }) => {
       <StyledButton href="#v" width="fit-content">
         Let's Connect!
       </StyledButton>
-    </StyledWrapper>
+    </Wrapper>
   );
 };
 
-const StyledWrapper = styled.section`
+const Wrapper = styled.section`
   position: fixed;
   display: flex;
   flex-direction: column;
