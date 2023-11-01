@@ -1,24 +1,9 @@
-"use client";
-
 import { useState } from "react";
 import styled from "styled-components";
 import { StyledSection, StyledSectionHeading } from "../ui";
 import { helpers } from "../../styles";
 import ContactForm from "./ContactForm";
 import ContactConfirm from "./ContactConfirm";
-
-const Inner = styled.div`
-  ${helpers.maxWidthWrapper}
-  display: flex;
-  flex-direction: column;
-  padding: var(--spacing-md) var(--spacing-lg);
-  color: var(--color-grey-100);
-
-  p {
-    font-family: "Roboto", "sans-serif";
-    margin-bottom: var(--spacing-md);
-  }
-`;
 
 const Contact = (props) => {
   const [showForm, setShowForm] = useState(true);
@@ -48,5 +33,18 @@ const Contact = (props) => {
     </StyledSection>
   );
 };
+
+const Inner = styled.div`
+  ${helpers.maxWidthWrapper}
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-md) var(--spacing-lg);
+  color: var(--color-grey-100);
+
+  p {
+    font-family: "Roboto", "sans-serif";
+    margin-bottom: var(--spacing-md);
+  }
+`;
 
 export default Contact;

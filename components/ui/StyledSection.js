@@ -9,7 +9,7 @@ const StyledSection = styled.section`
   background: ${(p) => (p.color ? p.color : "transparent")};
 
   @media ${QUERIES.tabetAndDown} {
-    padding: var(--spacing-xxl) 0;
+    padding: var(--spacing-xxl) var(--spacing-md);
   }
 `;
 
