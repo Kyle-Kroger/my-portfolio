@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { helpers, QUERIES } from "../../styles";
 
 const StyledButton = styled.a`
+  all: unset;
   ${helpers.flexCenter}
   background-color: var(--color-primary-300);
   color: white;
@@ -22,12 +23,12 @@ const StyledButton = styled.a`
     inset 0 0.6em 2em -0.3em rgba(255, 255, 255, 0.15),
     inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
 
-  :active {
+  &:active {
     box-shadow: inset 0 0.6em 2em -0.3em rgba(0, 0, 0, 0.15),
       inset 0 0 0em 0.05em rgba(255, 255, 255, 0.12);
   }
 
-  :hover {
+  &:hover {
     filter: brightness(110%);
   }
 

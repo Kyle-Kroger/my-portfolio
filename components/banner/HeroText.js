@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { animations, QUERIES } from "../../styles";
-import { StyledButton } from "../ui";
+import { StyledButton, SpaceButton } from "../ui";
 
 const HeroText = ({ className, children }) => {
   return (
@@ -12,9 +12,7 @@ const HeroText = ({ className, children }) => {
         with a great user experience. I always love talking with new people and
         learning what they are working on, so feel free to shoot me a message!
       </p>
-      <StyledButton href="#v" width="fit-content">
-        Let's Connect!
-      </StyledButton>
+      <SpaceButton href="#v">Let's Connect!</SpaceButton>
     </StyledWrapper>
   );
 };

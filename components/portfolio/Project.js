@@ -1,7 +1,12 @@
 "use client";
 
 import styled, { css } from "styled-components";
-import { StyledButton, StyledPhotoCard, GlassWrapper } from "../ui";
+import {
+  StyledButton,
+  StyledPhotoCard,
+  GlassWrapper,
+  SpaceButton,
+} from "../ui";
 import { helpers, QUERIES } from "../../styles";
 
 const Project = (props) => {
@@ -38,9 +43,7 @@ const Project = (props) => {
         <div>
           <p>{desc}</p>
         </div>
-        <StyledButton href="#v" width="fit-content">
-          Learn More
-        </StyledButton>
+        <SpaceButton href="#v">Learn More</SpaceButton>
       </DescriptionBox>
     </Wrapper>
   );
