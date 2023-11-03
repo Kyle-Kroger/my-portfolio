@@ -10,7 +10,7 @@ const Inner = styled.div`
   display: flex;
   flex-direction: column;
 
-  padding: var(--spacing-md) var(--spacing-lg);
+  padding: var(--spacing-md) 0;
 
   p {
     font-family: "Roboto", "sans-serif";

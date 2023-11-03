@@ -20,10 +20,6 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   text-transform: capitalize;
   font-family: "Lora", "serif";
-
-  @media ${QUERIES.tabetAndDown} {
-    padding: 0 var(--spacing-lg);
-  }
 `;
 
 const Divider = styled.div`

@@ -22,14 +22,14 @@ const StyledHeroImage = styled(HeroImage)`
 
 const Wrapper = styled.div`
   position: relative;
-  min-height: ${(p) => (p.height ? p.height : "100vh")};
+  min-height: 100vh;
   background-color: var(--color-grey-900);
 
   display: flex;
   justify-content: center;
 
   @media ${QUERIES.tabetAndDown} {
-    min-height: calc(100vh - 52px);
+    min-height: calc(100vh - var(--mobile-header-height));
   }
 `;
 

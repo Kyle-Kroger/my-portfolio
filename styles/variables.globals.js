@@ -28,18 +28,6 @@ const variables = css`
     --color-primary-900: hsl(230, 57%, 12%);
     --color-primary-900T: hsl(234 49% 24% / 0.26);
 
-    --color-secondary-100: hsl(243, 60%, 81%);
-    --color-secondary-200: hsl(243, 40%, 69%);
-    --color-secondary-300: hsl(245, 20%, 56%);
-    --color-secondary-400: hsl(248, 21%, 47%);
-    --color-secondary-500: hsl(252, 32%, 39%);
-    --color-secondary-600: hsl(252, 34%, 36%);
-    --color-secondary-A600: hsl(308, 23%, 34%);
-    --color-secondary-700: hsl(253, 30%, 29%);
-    --color-secondary-800: hsl(255, 30%, 26%);
-    --color-secondary-A800: hsl(296, 25%, 23%);
-    --color-secondary-900: hsl(260, 30%, 18%);
-
     --color-grey-100: hsl(240, 0%, 84%);
     --color-grey-200: hsl(240, 3%, 77%);
     --color-grey-300: hsl(240, 5%, 50%);
@@ -136,6 +124,7 @@ const variables = css`
     /* Sizing */
     --sidebar-width: 200px;
     --content-max-width: 1400px;
+    --mobile-header-height: 52px;
   }
 `;
 

@@ -1,57 +1,31 @@
 "use client";
-import { useSearchParams } from "next/navigation";
 import styled from "styled-components";
 import { StyledIconBase } from "@styled-icons/styled-icon";
-import {
-  Home,
-  Envelope,
-  User,
-  ImagePortrait,
-  Moon,
-  Sun,
-} from "@styled-icons/fa-solid";
+import { Home, Envelope, User, ImagePortrait } from "@styled-icons/fa-solid";
 
 import useNavStore from "../../stores/useNavStore";
-import { NavFooter } from ".";
+import { NavFooter, NavLink } from ".";
 import { QUERIES } from "../../styles";
 
-const Sidebar = () => {
-  const searchParams = useSearchParams();
-  const hideSidebar = useNavStore((state) => state.hideSidebar);
+const links = [
+  { name: "home", icon: () => <Home /> },
+  { name: "about", icon: () => <User /> },
+  { name: "portfolio", icon: () => <ImagePortrait /> },
+  { name: "contact", icon: () => <Envelope /> },
+];
 
-  //const hideSidebar = searchParams.get("hideSidebar");
+const Sidebar = () => {
+  const hideSidebar = useNavStore((state) => state.hideSidebar);
 
   return (
     <SidebarWrapper $hideSidebar={hideSidebar}>
       <StyledNav>
         <ul>
-          <li>
-            <a href="#top">
-              <Home />
-              Home
-            </a>
-          </li>
-
-          <li>
-            <a href="#about">
-              <User />
-              About
-            </a>
-          </li>
-
-          <li>
-            <a href="#portfolio">
-              <ImagePortrait />
-              Portfolio
-            </a>
-          </li>
-
-          <li>
-            <a href="#contact">
-              <Envelope />
-              Contact
-            </a>
-          </li>
+          {links.map((link) => (
+            <NavLink key={link.name} name={link.name}>
+              {link.icon()}
+            </NavLink>
+          ))}
         </ul>
       </StyledNav>
       <NavFooterWrapper>
@@ -96,10 +70,8 @@ const StyledNav = styled.nav`
     align-items: center;
   }
 
-  ul li {
+  /* ul li {
     width: 100%;
-    padding-top: 16px;
-    padding-bottom: 16px;
     text-align: center;
 
     transition: all 200ms ease-out;
@@ -110,6 +82,12 @@ const StyledNav = styled.nav`
     color: white;
     transform: scale(1.1);
   }
+
+  ul li a {
+    display: block;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  } */
 
   ${StyledIconBase} {
     padding-right: 12px;
