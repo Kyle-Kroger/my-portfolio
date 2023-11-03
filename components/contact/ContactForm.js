@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from "react";
 import styled from "styled-components";
-import { StyledButton } from "../ui";
+import { StyledButton, SpaceButton } from "../ui";
 import emailjs from "@emailjs/browser";
 
 const FormContainer = styled.div`
@@ -126,9 +126,9 @@ const ContactForm = ({ setShowForm }) => {
           />
         </FormTextareaContainer>
 
-        <StyledButton as="button" type="submit" width="fit-content">
+        <SpaceButton as="button" type="submit">
           Submit
-        </StyledButton>
+        </SpaceButton>
       </Form>
     </FormContainer>
   );
