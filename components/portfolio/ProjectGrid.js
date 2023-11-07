@@ -9,8 +9,15 @@ import FeaturedProject from "./FeaturedProject";
 const projects = [
   {
     title: "Playlist Manager for Spotify",
-    desc: "Meow test. This is a project that allows one to build a playlist",
-    techStack: ["TypeScript", "NextJs", "Styled Components", "MongoDB"],
+    desc: "Meow test. This is a project that allows one to build a playlist. This app uses the spotify api to allow users to create and edit their playlist in a clean and user friendly design.",
+    techStack: [
+      "TypeScript",
+      "React",
+      "NextJs",
+      "Styled Components",
+      "MongoDB",
+      "Spotify API",
+    ],
     featured: true,
     imgSrc: "",
     imgDes: "",
@@ -44,33 +51,36 @@ const ProjectGrid = (props) => {
     <StyledSection color="var(--project-background)">
       <StyledSectionHeading text={"Portfolio"} sectionId="portfolio" />
       <GridWrapper>
-        <PositionedFeaturedProject
-          key={projects[0].title}
-          title={projects[0].title}
-          desc={projects[0].desc}
-          techStack={projects[0].techStack}
-          imgScr={projects[0].imgSrc}
-          imgDes={projects[0].imgDes}
-          link={projects[0].link}
-          gitLink={projects[0].gitLink}
-          featured={projects[0].featured}
-          className={projects[0].featured ? "featured" : ""}
-        />
         {projects.map((project, i) => {
-          return (
-            <StyledProject
-              key={project.title}
-              title={project.title}
-              desc={project.desc}
-              techStack={project.techStack}
-              imgScr={project.imgSrc}
-              imgDes={project.imgDes}
-              link={project.link}
-              gitLink={project.gitLink}
-              featured={project.featured}
-              className={project.featured ? "featured" : ""}
-            />
-          );
+          if (project.featured) {
+            return (
+              <PositionedFeaturedProject
+                key={project.title}
+                title={project.title}
+                desc={project.desc}
+                techStack={project.techStack}
+                imgScr={project.imgSrc}
+                imgDes={project.imgDes}
+                link={project.link}
+                gitLink={project.gitLink}
+              />
+            );
+          } else {
+            return (
+              <StyledProject
+                key={project.title}
+                title={project.title}
+                desc={project.desc}
+                techStack={project.techStack}
+                imgScr={project.imgSrc}
+                imgDes={project.imgDes}
+                link={project.link}
+                gitLink={project.gitLink}
+                featured={project.featured}
+                className={project.featured ? "featured" : ""}
+              />
+            );
+          }
         })}
       </GridWrapper>
     </StyledSection>

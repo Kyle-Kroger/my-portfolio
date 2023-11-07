@@ -7,6 +7,7 @@ import {
   GlassWrapper,
   SpaceButton,
 } from "../ui";
+import { DescriptionBox, TechList } from "./project-components";
 import { helpers, QUERIES } from "../../styles";
 
 const FeaturedProject = ({
@@ -18,28 +19,21 @@ const FeaturedProject = ({
   link,
   gitLink,
   className,
-  featured,
 }) => {
   return (
-    <Wrapper className={className} $featured={featured}>
-      <Title $featured={featured}>
-        <div>
-          {featured && <p>-- Featured Project --</p>}
-          <h3>{title}</h3>
-          <ul>
-            {techStack.map((tech) => (
-              <li key={tech}>{tech}</li>
-            ))}
-          </ul>
-        </div>
+    <Wrapper className={className}>
+      <Title>
+        <p>-- Featured Project --</p>
+        <h3>{title}</h3>
+        <TechList techStack={techStack} />
         <DescriptionBox>
           <div>
             <p>{desc}</p>
           </div>
-          <SpaceButton href="#v">Learn More</SpaceButton>
+          <SpaceButton href="#v">Visit the Site</SpaceButton>
         </DescriptionBox>
       </Title>
-      <PhotoCardWrapper $featured={featured}>
+      <PhotoCardWrapper>
         <StyledPhotoCard>
           <img src="/img/spotify-preview.png" alt={imgDes} />
         </StyledPhotoCard>
@@ -50,16 +44,12 @@ const FeaturedProject = ({
 
 const Wrapper = styled(GlassWrapper)`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: var(--spacing-md);
   padding: var(--spacing-lg);
 
-  ${(p) =>
-    p.$featured &&
-    css`
-      flex-direction: row;
-      flex-wrap: wrap;
-      width: 100%;
-    `}
   @media ${QUERIES.tabetAndDown} {
     max-width: 850px;
     flex-direction: column-reverse;
@@ -67,80 +57,38 @@ const Wrapper = styled(GlassWrapper)`
 `;
 
 const Title = styled.section`
-  padding: var(--spacing-md);
-  padding-bottom: 0;
+  flex: 1;
+  ${helpers.flexCenter};
+  flex-direction: column;
 
-  ${(p) =>
-    p.$featured &&
-    css`
-      flex: 1;
-      padding: var(--spacing-lg);
-      padding-bottom: 0;
-      min-width: 40%;
+  & > div {
+    ${helpers.flexCenter}
+    flex-direction: column;
 
-      div {
-        ${helpers.flexCenter}
-        flex-direction: column;
-        margin-top: 3vw;
-
-        @media ${QUERIES.tabetAndDown} {
-          margin-top: 0;
-        }
-      }
-    `}
-
-  h3,
-  h4,
-  li {
-    text-align: center;
+    @media ${QUERIES.tabetAndDown} {
+      margin-top: 0;
+    }
   }
 
+  //title text
   h3 {
     width: 100%;
     color: white;
     border-bottom: 3px solid rgba(139, 139, 139, 0.14);
     padding-bottom: var(--spacing-sm);
+    text-align: center;
   }
 
-  p {
+  //Featured Project text
+  & > p {
     color: var(--color-text-highlight);
     font-size: clamp(1rem, 2vw + 1rem, 1.4rem);
-  }
-
-  ul {
-    ${helpers.flexCenter};
-    flex-wrap: wrap;
-    column-gap: var(--spacing-xl);
-    margin-top: var(--spacing-sm);
-  }
-
-  li {
-    font-family: "Roboto", "sans-serif";
-    color: var(--color-grey-200);
-    margin-bottom: var(--spacing-xs);
   }
 `;
 
 const PhotoCardWrapper = styled.section`
   margin: 0 auto;
-  flex: 1.4;
-`;
-
-const DescriptionBox = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 94%;
-  padding: var(--spacing-md);
-  padding-top: 0;
-  margin: 0 auto;
-  margin-top: var(--spacing-md);
-  color: var(--color-grey-100);
-  border-top: 3px solid rgba(139, 139, 139, 0.14);
-
-  p {
-    padding: var(--spacing-md) 0;
-  }
+  flex: 1.3;
 `;
 
 export default FeaturedProject;
