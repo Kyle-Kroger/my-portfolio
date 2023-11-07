@@ -41,7 +41,7 @@ const FeaturedProject = ({
       </Title>
       <PhotoCardWrapper $featured={featured}>
         <StyledPhotoCard>
-          <img src="http://placekitten.com/800/450" alt={imgDes} />
+          <img src="/img/spotify-preview.png" alt={imgDes} />
         </StyledPhotoCard>
       </PhotoCardWrapper>
     </Wrapper>
@@ -51,14 +51,13 @@ const FeaturedProject = ({
 const Wrapper = styled(GlassWrapper)`
   display: flex;
   flex-direction: column;
-  padding-bottom: 0;
+  padding: var(--spacing-lg);
 
   ${(p) =>
     p.$featured &&
     css`
       flex-direction: row;
       flex-wrap: wrap;
-      padding: 0;
       width: 100%;
     `}
   @media ${QUERIES.tabetAndDown} {
@@ -123,25 +122,8 @@ const Title = styled.section`
 `;
 
 const PhotoCardWrapper = styled.section`
-  padding: var(--spacing-md);
   margin: 0 auto;
-  max-width: 500px;
-
-  ${(p) =>
-    p.$featured &&
-    css`
-      flex: 1.3;
-      min-width: 40%;
-      max-width: 650px;
-      padding: var(--spacing-lg);
-      padding-left: 0;
-      padding-bottom: 0;
-      margin-bottom: 0;
-
-      @media ${QUERIES.tabetAndDown} {
-        padding-left: var(--spacing-lg);
-      }
-    `}
+  flex: 1.4;
 `;
 
 const DescriptionBox = styled.div`
