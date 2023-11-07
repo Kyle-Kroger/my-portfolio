@@ -3,8 +3,8 @@
 import styled from "styled-components";
 import { helpers, QUERIES } from "../../styles";
 import { StyledSection, StyledSectionHeading } from "../ui";
-
 import Project from "./Project";
+import FeaturedProject from "./FeaturedProject";
 
 const projects = [
   {
@@ -44,6 +44,18 @@ const ProjectGrid = (props) => {
     <StyledSection color="var(--project-background)">
       <StyledSectionHeading text={"Portfolio"} sectionId="portfolio" />
       <GridWrapper>
+        <PositionedFeaturedProject
+          key={projects[0].title}
+          title={projects[0].title}
+          desc={projects[0].desc}
+          techStack={projects[0].techStack}
+          imgScr={projects[0].imgSrc}
+          imgDes={projects[0].imgDes}
+          link={projects[0].link}
+          gitLink={projects[0].gitLink}
+          featured={projects[0].featured}
+          className={projects[0].featured ? "featured" : ""}
+        />
         {projects.map((project, i) => {
           return (
             <StyledProject
@@ -75,6 +87,14 @@ const GridWrapper = styled.section`
 
   @media ${QUERIES.tabetAndDown} {
     gap: var(--spacing-xl);
+  }
+`;
+
+const PositionedFeaturedProject = styled(FeaturedProject)`
+  grid-column: 1/-1;
+
+  @media ${QUERIES.tabetAndDown} {
+    margin: 0 auto;
   }
 `;
 
