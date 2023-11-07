@@ -3,7 +3,7 @@
 import styled from "styled-components";
 import { StyledIconBase } from "@styled-icons/styled-icon";
 
-import { Twitter, Git, Linkedin } from "@styled-icons/boxicons-logos";
+import { Twitter, Github, Linkedin } from "@styled-icons/boxicons-logos";
 import { Envelope } from "@styled-icons/fa-solid";
 
 const NavFooter = (props) => {
@@ -24,7 +24,7 @@ const NavFooter = (props) => {
         rel="noreferrer"
         aria-label="Github link"
       >
-        <Git />
+        <Github />
       </a>
       <a
         href="https://www.linkedin.com/in/kyle-kroger-5a70a4231/"
