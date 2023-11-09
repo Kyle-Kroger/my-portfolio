@@ -12,9 +12,9 @@ const MySkills = (props) => {
       <Inner>
         <p>
           While I have coded in quite a few other languages these are the skills
-          that I feel proficient with. Currently I am working on my Next.js,
-          TypeScript, Prisma, and SQL skills by building a D&D initative-tracker
-          app in my free time.
+          that I feel most proficient with. Currently I am working on my
+          Next.js, TypeScript, Prisma, and SQL skills by building a D&D
+          initative-tracker app in my free time.
         </p>
         <SkillWrapper>
           <Skill name={"html5"} />
