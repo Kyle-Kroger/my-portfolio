@@ -18,10 +18,8 @@ const Project = ({
   return (
     <Wrapper className={className}>
       <Title>
-        <div>
-          <h3>{title}</h3>
-          <TechList techStack={techStack} />
-        </div>
+        <h3>{title}</h3>
+        <TechList techStack={techStack} />
       </Title>
       <PhotoCardWrapper>
         <StyledPhotoCard>
@@ -29,9 +27,7 @@ const Project = ({
         </StyledPhotoCard>
       </PhotoCardWrapper>
       <DescriptionBox>
-        <div>
-          <p>{desc}</p>
-        </div>
+        <p>{desc}</p>
         <SpaceButton href="#v">Visit the Site</SpaceButton>
       </DescriptionBox>
     </Wrapper>
