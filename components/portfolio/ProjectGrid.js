@@ -7,7 +7,7 @@ import Project from "./Project";
 import FeaturedProject from "./FeaturedProject";
 import projects from "./project-data";
 
-const ProjectGrid = (props) => {
+const ProjectGrid = () => {
   return (
     <StyledSection color="var(--project-background)">
       <StyledSectionHeading text={"Portfolio"} sectionId="portfolio" />

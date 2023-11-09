@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import { helpers, QUERIES } from "../../styles";
+import { helpers } from "../../styles";
 
 const StyledSectionHeading = (props) => {
   const { text, sectionId } = props;

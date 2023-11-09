@@ -1,9 +1,9 @@
 "use client";
 
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { StyledPhotoCard, GlassWrapper, SpaceButton } from "../ui";
 import { DescriptionBox, TechList } from "./project-components";
-import { helpers, QUERIES } from "../../styles";
+import { QUERIES } from "../../styles";
 
 const Project = ({
   title,

@@ -5,29 +5,6 @@ import { helpers } from "../../styles";
 import { StyledSection, StyledSectionHeading, GlassWrapper } from "../ui";
 import Skill from "./Skill";
 
-const Inner = styled.div`
-  ${helpers.maxWidthWrapper}
-  display: flex;
-  flex-direction: column;
-
-  padding: var(--spacing-md) 0;
-
-  p {
-    font-family: "Roboto", "sans-serif";
-    font-size: var(--fz-lg);
-  }
-`;
-
-const SkillWrapper = styled(GlassWrapper)`
-  display: flex;
-  flex-wrap: wrap;
-  align-self: center;
-  justify-content: left;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-md) 4px;
-  margin: var(--spacing-md) 0;
-`;
-
 const MySkills = (props) => {
   return (
     <StyledSection color="url('/img/space-two.webp')">
@@ -59,5 +36,28 @@ const MySkills = (props) => {
     </StyledSection>
   );
 };
+
+const Inner = styled.div`
+  ${helpers.maxWidthWrapper}
+  display: flex;
+  flex-direction: column;
+
+  padding: var(--spacing-md) 0;
+
+  p {
+    font-family: "Roboto", "sans-serif";
+    font-size: var(--fz-lg);
+  }
+`;
+
+const SkillWrapper = styled(GlassWrapper)`
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-content: left;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) 4px;
+  margin: var(--spacing-md) 0;
+`;
 
 export default MySkills;

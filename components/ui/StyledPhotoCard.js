@@ -18,7 +18,6 @@ const StyledPhotoCard = styled.figure`
   overflow: hidden;
 
   img {
-    /* height: 100%; */
     margin-bottom: 2%;
     border-radius: var(--radius-subtle);
     transition: transform 400ms ease-out;

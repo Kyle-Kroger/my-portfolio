@@ -1,12 +1,7 @@
 "use client";
 
-import styled, { css } from "styled-components";
-import {
-  StyledButton,
-  StyledPhotoCard,
-  GlassWrapper,
-  SpaceButton,
-} from "../ui";
+import styled from "styled-components";
+import { StyledPhotoCard, GlassWrapper, SpaceButton } from "../ui";
 import { DescriptionBox, TechList } from "./project-components";
 import { helpers, QUERIES } from "../../styles";
 

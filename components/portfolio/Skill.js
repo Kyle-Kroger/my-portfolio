@@ -114,13 +114,6 @@ const Wrapper = styled.div`
   }
 `;
 
-const IconWrapper = styled.div`
-  ${helpers.flexCenter}
-
-  width: 36px;
-  height: 36px;
-`;
-
 const Skill = ({ name }) => {
   if (!ICONS[name.toLowerCase()]) {
     return <p>Icon Not Found</p>;
@@ -132,5 +125,12 @@ const Skill = ({ name }) => {
     </Wrapper>
   );
 };
+
+const IconWrapper = styled.div`
+  ${helpers.flexCenter}
+
+  width: 36px;
+  height: 36px;
+`;
 
 export default Skill;
