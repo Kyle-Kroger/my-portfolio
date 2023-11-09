@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { animations, QUERIES } from "../../styles";
-import { StyledButton, SpaceButton } from "../ui";
+import { SpaceButton } from "../ui";
 
 const HeroText = ({ className, children }) => {
   return (

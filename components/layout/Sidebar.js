@@ -70,25 +70,6 @@ const StyledNav = styled.nav`
     align-items: center;
   }
 
-  /* ul li {
-    width: 100%;
-    text-align: center;
-
-    transition: all 200ms ease-out;
-  }
-
-  ul li:hover {
-    background-color: var(--color-primary-700);
-    color: white;
-    transform: scale(1.1);
-  }
-
-  ul li a {
-    display: block;
-    padding-top: 16px;
-    padding-bottom: 16px;
-  } */
-
   ${StyledIconBase} {
     padding-right: 12px;
     color: var(--color-primary-100);

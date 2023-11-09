@@ -14,9 +14,9 @@ const Contact = (props) => {
       <Inner>
         <p>
           I'm always looking for new opportunities! Feel free to send me a
-          message if you want my resume, are looking to build something
-          together, or even if its just to say hi! I always loving talking with
-          new and interesting people!
+          message for job opportunities, if you're interested in building
+          something together, or even if its just to say hi! I always loving
+          talking with new and interesting people!
         </p>
         <p>
           If you're looking to build a website I would love to help you build

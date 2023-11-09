@@ -3,7 +3,7 @@
 import styled from "styled-components";
 import { helpers } from "../../styles";
 
-const Footer = (props) => {
+const Footer = () => {
   return (
     <StyledWrapper>
       <Divider />

@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from "react";
 import styled from "styled-components";
-import { StyledButton, SpaceButton } from "../ui";
+import { SpaceButton } from "../ui";
 import emailjs from "@emailjs/browser";
 
 const FormContainer = styled.div`
