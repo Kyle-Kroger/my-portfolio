@@ -28,7 +28,7 @@ const ProjectGrid = (props) => {
             );
           } else {
             return (
-              <StyledProject
+              <PositionedProject
                 key={project.title}
                 title={project.title}
                 desc={project.desc}
@@ -69,7 +69,7 @@ const PositionedFeaturedProject = styled(FeaturedProject)`
   }
 `;
 
-const StyledProject = styled(Project)`
+const PositionedProject = styled(Project)`
   @media ${QUERIES.tabetAndDown} {
     grid-column: 1/-1;
     margin: 0 auto;
