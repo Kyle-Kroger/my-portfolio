@@ -25,7 +25,14 @@ const FeaturedProject = ({
           <div>
             <p>{desc}</p>
           </div>
-          <SpaceButton href="#v">Visit the Site</SpaceButton>
+          <SpaceButton
+            href={link}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Project site link"
+          >
+            Visit the Site
+          </SpaceButton>
         </DescriptionBox>
       </Title>
       <PhotoCardWrapper>

@@ -1,6 +1,7 @@
 "use client";
 
 import styled from "styled-components";
+import Link from "next/link";
 import { StyledPhotoCard, GlassWrapper, SpaceButton } from "../ui";
 import { DescriptionBox, TechList } from "./project-components";
 import { QUERIES } from "../../styles";
@@ -28,7 +29,14 @@ const Project = ({
       </PhotoCardWrapper>
       <DescriptionBox>
         <p>{desc}</p>
-        <SpaceButton href="#v">Visit the Site</SpaceButton>
+        <SpaceButton
+          href={link}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Project site link"
+        >
+          Visit the Site
+        </SpaceButton>
       </DescriptionBox>
     </Wrapper>
   );

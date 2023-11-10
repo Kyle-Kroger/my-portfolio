@@ -1,6 +1,7 @@
 "use client";
 import styled from "styled-components";
 import { StyledIconBase } from "@styled-icons/styled-icon";
+import Link from "next/link";
 
 import { Twitter, Github, Linkedin } from "@styled-icons/boxicons-logos";
 import { Envelope } from "@styled-icons/fa-solid";
@@ -8,34 +9,34 @@ import { Envelope } from "@styled-icons/fa-solid";
 const NavFooter = (props) => {
   return (
     <Wrapper>
-      <a
+      <Link
         href="https://twitter.com/KS_Kroger"
         target="_blank"
         rel="noreferrer"
         aria-label="Twitter link"
       >
         <Twitter />
-      </a>
+      </Link>
 
-      <a
+      <Link
         href="https://github.com/Kyle-Kroger"
         target="_blank"
         rel="noreferrer"
         aria-label="Github link"
       >
         <Github />
-      </a>
-      <a
+      </Link>
+      <Link
         href="https://www.linkedin.com/in/kyle-kroger-5a70a4231/"
         target="_blank"
         rel="noreferrer"
         aria-label="Linkedin link"
       >
         <Linkedin />
-      </a>
-      <a href="mailto: kyle.s.kroger@gmail.com" aria-label="Email link">
+      </Link>
+      <Link href="mailto: kyle.s.kroger@gmail.com" aria-label="Email link">
         <Envelope />
-      </a>
+      </Link>
     </Wrapper>
   );
 };
