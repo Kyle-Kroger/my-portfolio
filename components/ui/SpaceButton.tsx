@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import styled, { keyframes } from "styled-components";
 
 interface Props {
@@ -21,7 +22,7 @@ const gradient = keyframes`
   }
 `;
 
-const SpaceButton = styled.a<Props>`
+const SpaceButton = styled(Link)<Props>`
   cursor: pointer;
   background-color: ${(p) =>
     p.$primaryColor ? p.$primaryColor : "hsl(230, 39%, 37%);"};

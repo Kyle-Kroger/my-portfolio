@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from "next/link";
 import { animations, QUERIES } from "../../styles";
 import { SpaceButton } from "../ui";
 
@@ -12,7 +13,9 @@ const HeroText = ({ className, children }) => {
         with a great user experience. I always love talking with new people and
         learning what they are working on, so feel free to shoot me a message!
       </p>
-      <SpaceButton href="#v">Let's Connect!</SpaceButton>
+      <SpaceButton href="#contact" aria-label="Contact">
+        Let's Connect!
+      </SpaceButton>
     </Wrapper>
   );
 };

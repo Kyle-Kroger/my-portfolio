@@ -13,7 +13,7 @@ const projectData = [
     featured: true,
     imgSrc: "",
     imgDes: "",
-    link: "",
+    link: "https://playlist-builder-for-spotify.vercel.app",
     gitLink: "",
   },
   {
