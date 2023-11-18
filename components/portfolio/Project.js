@@ -24,7 +24,7 @@ const Project = ({
       </Title>
       <PhotoCardWrapper>
         <StyledPhotoCard>
-          <img src="http://placekitten.com/800/450" alt={imgDes} />
+          <img src={imgSrc} alt={imgDes} />
         </StyledPhotoCard>
       </PhotoCardWrapper>
       <DescriptionBox>

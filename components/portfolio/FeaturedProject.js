@@ -37,7 +37,7 @@ const FeaturedProject = ({
       </Title>
       <PhotoCardWrapper>
         <StyledPhotoCard>
-          <img src="/img/spotify-preview.png" alt={imgDes} />
+          <img src={imgSrc} alt={imgDes} />
         </StyledPhotoCard>
       </PhotoCardWrapper>
     </Wrapper>
