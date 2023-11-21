@@ -3,21 +3,12 @@ import styled from "styled-components";
 import { StyledIconBase } from "@styled-icons/styled-icon";
 import Link from "next/link";
 
-import { Twitter, Github, Linkedin } from "@styled-icons/boxicons-logos";
+import { Github, Linkedin } from "@styled-icons/boxicons-logos";
 import { Envelope } from "@styled-icons/fa-solid";
 
 const NavFooter = (props) => {
   return (
     <Wrapper>
-      <Link
-        href="https://twitter.com/KS_Kroger"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Twitter link"
-      >
-        <Twitter />
-      </Link>
-
       <Link
         href="https://github.com/Kyle-Kroger"
         target="_blank"
