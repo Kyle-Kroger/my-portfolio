@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Github, Linkedin } from "@styled-icons/boxicons-logos";
 import { Envelope } from "@styled-icons/fa-solid";
 
-const NavFooter = (props) => {
+const NavFooter = () => {
   return (
     <Wrapper>
       <Link

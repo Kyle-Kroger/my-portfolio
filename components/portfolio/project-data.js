@@ -14,7 +14,7 @@ const projectData = [
     imgSrc: "/img/spotify-preview.png",
     imgDes: "/img/spotify-preview.png",
     link: "https://playlist-builder-for-spotify.vercel.app",
-    gitLink: "",
+    gitLink: "https://github.com/Kyle-Kroger/spotify-playlist-builder",
   },
   {
     title: "Hue to Hex",
@@ -32,7 +32,7 @@ const projectData = [
     imgSrc: "/img/black-lantern-preview.png",
     imgDes: "Picture of website",
     link: "https://black-lantern-pizza.vercel.app/",
-    gitLink: "",
+    gitLink: "https://github.com/Kyle-Kroger/black-lantern-pizza",
   },
 ];
 
