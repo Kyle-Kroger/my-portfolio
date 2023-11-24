@@ -42,11 +42,9 @@ const Inner = styled.div`
   display: flex;
   flex-direction: column;
 
-  padding: var(--spacing-md) 0;
-
   p {
     font-family: "Roboto", "sans-serif";
-    font-size: var(--fz-lg);
+    font-size: var(--fz-md);
   }
 `;
 

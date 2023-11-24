@@ -7,7 +7,10 @@ const Footer = () => {
   return (
     <StyledWrapper>
       <Divider />
-      <p>Made and designed by Kyle Kroger - © 2023</p>
+      <p>
+        Made and designed by Kyle Kroger. Built in Visual Studio Code using
+        Next.js and Styled Components, deployed with Vercel - © 2023
+      </p>
     </StyledWrapper>
   );
 };
@@ -19,6 +22,9 @@ const StyledWrapper = styled.footer`
   min-height: 12vh;
   background-color: var(--color-primary-900);
   padding: var(--spacing-lg);
+
+  font-size: var(--fz-sm);
+  color: var(--color-grey-300);
 
   & > p {
     padding-bottom: var(--spacing-xs);

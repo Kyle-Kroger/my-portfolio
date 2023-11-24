@@ -73,6 +73,7 @@ const Inner = styled.div`
 
   p {
     font-family: "Roboto", "sans-serif";
+    font-size: var(--fz-md);
   }
 `;
 
