@@ -20,7 +20,7 @@ const ProjectGrid = () => {
                 title={project.title}
                 desc={project.desc}
                 techStack={project.techStack}
-                imgScr={project.imgSrc}
+                imgSrc={project.imgSrc}
                 imgDes={project.imgDes}
                 link={project.link}
                 gitLink={project.gitLink}
@@ -33,7 +33,7 @@ const ProjectGrid = () => {
                 title={project.title}
                 desc={project.desc}
                 techStack={project.techStack}
-                imgScr={project.imgSrc}
+                imgSrc={project.imgSrc}
                 imgDes={project.imgDes}
                 link={project.link}
                 gitLink={project.gitLink}

@@ -1,8 +1,8 @@
 "use client";
 
 import styled from "styled-components";
-import { StyledPhotoCard, GlassWrapper, SpaceButton } from "../ui";
-import { DescriptionBox, TechList } from "./project-components";
+import { StyledPhotoCard, GlassWrapper } from "../ui";
+import { DescriptionBox, TechList, ProjectButtons } from "./project-components";
 import { helpers, QUERIES } from "../../styles";
 
 const FeaturedProject = ({
@@ -22,22 +22,13 @@ const FeaturedProject = ({
         <h3>{title}</h3>
         <TechList techStack={techStack} />
         <DescriptionBox>
-          <div>
-            <p>{desc}</p>
-          </div>
-          <SpaceButton
-            href={link}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Project site link"
-          >
-            Visit the Site
-          </SpaceButton>
+          <p>{desc}</p>
+          <ProjectButtons link={link} gitLink={gitLink} />
         </DescriptionBox>
       </Title>
       <PhotoCardWrapper>
         <StyledPhotoCard>
-          <img src="/img/spotify-preview.png" alt={imgDes} />
+          <img src={imgSrc} alt={imgDes} />
         </StyledPhotoCard>
       </PhotoCardWrapper>
     </Wrapper>

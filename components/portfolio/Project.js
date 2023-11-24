@@ -1,9 +1,8 @@
 "use client";
 
 import styled from "styled-components";
-import Link from "next/link";
-import { StyledPhotoCard, GlassWrapper, SpaceButton } from "../ui";
-import { DescriptionBox, TechList } from "./project-components";
+import { StyledPhotoCard, GlassWrapper } from "../ui";
+import { DescriptionBox, TechList, ProjectButtons } from "./project-components";
 import { QUERIES } from "../../styles";
 
 const Project = ({
@@ -24,19 +23,12 @@ const Project = ({
       </Title>
       <PhotoCardWrapper>
         <StyledPhotoCard>
-          <img src="http://placekitten.com/800/450" alt={imgDes} />
+          <img src={imgSrc} alt={imgDes} />
         </StyledPhotoCard>
       </PhotoCardWrapper>
       <DescriptionBox>
         <p>{desc}</p>
-        <SpaceButton
-          href={link}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Project site link"
-        >
-          Visit the Site
-        </SpaceButton>
+        <ProjectButtons link={link} gitLink={gitLink} />
       </DescriptionBox>
     </Wrapper>
   );
@@ -45,6 +37,7 @@ const Project = ({
 const Wrapper = styled(GlassWrapper)`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding-bottom: 0;
 
   @media ${QUERIES.tabetAndDown} {
