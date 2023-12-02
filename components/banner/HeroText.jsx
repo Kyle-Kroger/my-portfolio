@@ -13,8 +13,8 @@ const HeroText = ({ className, children }) => {
         with a great user experience. I always love talking with new people and
         learning what they are working on, so feel free to shoot me a message!
       </p>
-      <SpaceButton href="#contact" aria-label="Contact">
-        Let's Connect!
+      <SpaceButton href="#portfolio" aria-label="Contact">
+        View My Projects
       </SpaceButton>
     </Wrapper>
   );
