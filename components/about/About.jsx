@@ -35,15 +35,13 @@ const About = (props) => {
               <p>
                 When I'm not coding or learning I enjoy reading, playing video
                 games with friends, and creating worlds and stories for my d&d
-                campaigns. Feel free to contact me with any questions or even
-                just to say hello. I always enjoy hearing from new people and
-                learning what they are working on!
+                campaigns.
               </p>
             </GlassWrapper>
           </StyledSectionWrapper>
           <PhotoCardWrapper>
             <StyledPhotoCard height="revert">
-              <img src="http://placekitten.com/400/550" alt="Kyle" />
+              <img src="/img/Kyle_12-23-nobg.png" alt="Kyle" />
             </StyledPhotoCard>
           </PhotoCardWrapper>
         </FlexWrapper>

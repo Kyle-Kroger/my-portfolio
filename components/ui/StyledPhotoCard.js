@@ -1,10 +1,8 @@
 "use client";
 
 import styled from "styled-components";
-import { helpers } from "../../styles";
 
 const StyledPhotoCard = styled.figure`
-  ${helpers.card}
   position: relative;
   display: flex;
   align-items: center;

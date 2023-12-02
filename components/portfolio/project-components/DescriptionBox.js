@@ -16,6 +16,10 @@ const Wrapper = styled.div`
   font-size: var(--fz-md);
   text-align: left;
   color: var(--color-grey-100);
+
+  p {
+    white-space: pre-line;
+  }
 `;
 
 export default DescriptionBox;
