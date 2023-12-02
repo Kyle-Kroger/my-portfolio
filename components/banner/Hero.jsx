@@ -23,6 +23,8 @@ const StyledHeroImage = styled(HeroImage)`
 const Wrapper = styled.div`
   position: relative;
   min-height: 100vh;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
   background-color: var(--color-grey-900);
 
   display: flex;
