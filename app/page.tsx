@@ -23,11 +23,11 @@ export default function Home() {
       <PageWrapper>
         <Hero url={background}></Hero>
         <ZWrapper>
-          <About></About>
+          <About />
           <MySkills />
-          <ProjectGrid> </ProjectGrid>
-          <Contact></Contact>
-          <Footer></Footer>
+          <ProjectGrid />
+          <Contact />
+          <Footer />
         </ZWrapper>
       </PageWrapper>
     </>
